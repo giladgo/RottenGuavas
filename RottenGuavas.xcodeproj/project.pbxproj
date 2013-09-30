@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9479EEC817F96686002DAA1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9479EEC717F96686002DAA1B /* Foundation.framework */; };
+		9479EECA17F96686002DAA1B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9479EEC917F96686002DAA1B /* CoreGraphics.framework */; };
+		9479EECC17F96686002DAA1B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9479EECB17F96686002DAA1B /* UIKit.framework */; };
+		9479EED217F96686002DAA1B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9479EED017F96686002DAA1B /* InfoPlist.strings */; };
+		9479EED417F96686002DAA1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9479EED317F96686002DAA1B /* main.m */; };
+		9479EED817F96686002DAA1B /* RottenGuavaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9479EED717F96686002DAA1B /* RottenGuavaAppDelegate.m */; };
+		9479EEDB17F96686002DAA1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9479EED917F96686002DAA1B /* Main.storyboard */; };
+		9479EEDE17F96686002DAA1B /* RottenGuavaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9479EEDD17F96686002DAA1B /* RottenGuavaViewController.m */; };
+		9479EEE017F96686002DAA1B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9479EEDF17F96686002DAA1B /* Images.xcassets */; };
+		9479EEE717F96686002DAA1B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9479EEE617F96686002DAA1B /* XCTest.framework */; };
+		9479EEE817F96686002DAA1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9479EEC717F96686002DAA1B /* Foundation.framework */; };
+		9479EEE917F96686002DAA1B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9479EECB17F96686002DAA1B /* UIKit.framework */; };
+		9479EEF117F96686002DAA1B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9479EEEF17F96686002DAA1B /* InfoPlist.strings */; };
+		9479EEF317F96686002DAA1B /* RottenGuavasTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9479EEF217F96686002DAA1B /* RottenGuavasTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9479EEEA17F96686002DAA1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9479EEBC17F96686002DAA1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9479EEC317F96686002DAA1B;
+			remoteInfo = RottenGuavas;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9479EEC417F96686002DAA1B /* RottenGuavas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RottenGuavas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9479EEC717F96686002DAA1B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9479EEC917F96686002DAA1B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9479EECB17F96686002DAA1B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9479EECF17F96686002DAA1B /* RottenGuavas-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RottenGuavas-Info.plist"; sourceTree = "<group>"; };
+		9479EED117F96686002DAA1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9479EED317F96686002DAA1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9479EED517F96686002DAA1B /* RottenGuavas-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RottenGuavas-Prefix.pch"; sourceTree = "<group>"; };
+		9479EED617F96686002DAA1B /* RottenGuavaAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RottenGuavaAppDelegate.h; sourceTree = "<group>"; };
+		9479EED717F96686002DAA1B /* RottenGuavaAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RottenGuavaAppDelegate.m; sourceTree = "<group>"; };
+		9479EEDA17F96686002DAA1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9479EEDC17F96686002DAA1B /* RottenGuavaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RottenGuavaViewController.h; sourceTree = "<group>"; };
+		9479EEDD17F96686002DAA1B /* RottenGuavaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RottenGuavaViewController.m; sourceTree = "<group>"; };
+		9479EEDF17F96686002DAA1B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9479EEE517F96686002DAA1B /* RottenGuavasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RottenGuavasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9479EEE617F96686002DAA1B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9479EEEE17F96686002DAA1B /* RottenGuavasTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RottenGuavasTests-Info.plist"; sourceTree = "<group>"; };
+		9479EEF017F96686002DAA1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9479EEF217F96686002DAA1B /* RottenGuavasTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RottenGuavasTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9479EEC117F96686002DAA1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9479EECA17F96686002DAA1B /* CoreGraphics.framework in Frameworks */,
+				9479EECC17F96686002DAA1B /* UIKit.framework in Frameworks */,
+				9479EEC817F96686002DAA1B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9479EEE217F96686002DAA1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9479EEE717F96686002DAA1B /* XCTest.framework in Frameworks */,
+				9479EEE917F96686002DAA1B /* UIKit.framework in Frameworks */,
+				9479EEE817F96686002DAA1B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9479EEBB17F96686002DAA1B = {
+			isa = PBXGroup;
+			children = (
+				9479EECD17F96686002DAA1B /* RottenGuavas */,
+				9479EEEC17F96686002DAA1B /* RottenGuavasTests */,
+				9479EEC617F96686002DAA1B /* Frameworks */,
+				9479EEC517F96686002DAA1B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9479EEC517F96686002DAA1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9479EEC417F96686002DAA1B /* RottenGuavas.app */,
+				9479EEE517F96686002DAA1B /* RottenGuavasTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9479EEC617F96686002DAA1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9479EEC717F96686002DAA1B /* Foundation.framework */,
+				9479EEC917F96686002DAA1B /* CoreGraphics.framework */,
+				9479EECB17F96686002DAA1B /* UIKit.framework */,
+				9479EEE617F96686002DAA1B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9479EECD17F96686002DAA1B /* RottenGuavas */ = {
+			isa = PBXGroup;
+			children = (
+				9479EED617F96686002DAA1B /* RottenGuavaAppDelegate.h */,
+				9479EED717F96686002DAA1B /* RottenGuavaAppDelegate.m */,
+				9479EED917F96686002DAA1B /* Main.storyboard */,
+				9479EEDC17F96686002DAA1B /* RottenGuavaViewController.h */,
+				9479EEDD17F96686002DAA1B /* RottenGuavaViewController.m */,
+				9479EEDF17F96686002DAA1B /* Images.xcassets */,
+				9479EECE17F96686002DAA1B /* Supporting Files */,
+			);
+			path = RottenGuavas;
+			sourceTree = "<group>";
+		};
+		9479EECE17F96686002DAA1B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9479EECF17F96686002DAA1B /* RottenGuavas-Info.plist */,
+				9479EED017F96686002DAA1B /* InfoPlist.strings */,
+				9479EED317F96686002DAA1B /* main.m */,
+				9479EED517F96686002DAA1B /* RottenGuavas-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9479EEEC17F96686002DAA1B /* RottenGuavasTests */ = {
+			isa = PBXGroup;
+			children = (
+				9479EEF217F96686002DAA1B /* RottenGuavasTests.m */,
+				9479EEED17F96686002DAA1B /* Supporting Files */,
+			);
+			path = RottenGuavasTests;
+			sourceTree = "<group>";
+		};
+		9479EEED17F96686002DAA1B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9479EEEE17F96686002DAA1B /* RottenGuavasTests-Info.plist */,
+				9479EEEF17F96686002DAA1B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9479EEC317F96686002DAA1B /* RottenGuavas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9479EEF617F96686002DAA1B /* Build configuration list for PBXNativeTarget "RottenGuavas" */;
+			buildPhases = (
+				9479EEC017F96686002DAA1B /* Sources */,
+				9479EEC117F96686002DAA1B /* Frameworks */,
+				9479EEC217F96686002DAA1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RottenGuavas;
+			productName = RottenGuavas;
+			productReference = 9479EEC417F96686002DAA1B /* RottenGuavas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9479EEE417F96686002DAA1B /* RottenGuavasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9479EEF917F96686002DAA1B /* Build configuration list for PBXNativeTarget "RottenGuavasTests" */;
+			buildPhases = (
+				9479EEE117F96686002DAA1B /* Sources */,
+				9479EEE217F96686002DAA1B /* Frameworks */,
+				9479EEE317F96686002DAA1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9479EEEB17F96686002DAA1B /* PBXTargetDependency */,
+			);
+			name = RottenGuavasTests;
+			productName = RottenGuavasTests;
+			productReference = 9479EEE517F96686002DAA1B /* RottenGuavasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9479EEBC17F96686002DAA1B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RottenGuava;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Gilad Goldberg";
+				TargetAttributes = {
+					9479EEE417F96686002DAA1B = {
+						TestTargetID = 9479EEC317F96686002DAA1B;
+					};
+				};
+			};
+			buildConfigurationList = 9479EEBF17F96686002DAA1B /* Build configuration list for PBXProject "RottenGuavas" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9479EEBB17F96686002DAA1B;
+			productRefGroup = 9479EEC517F96686002DAA1B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9479EEC317F96686002DAA1B /* RottenGuavas */,
+				9479EEE417F96686002DAA1B /* RottenGuavasTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9479EEC217F96686002DAA1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9479EEE017F96686002DAA1B /* Images.xcassets in Resources */,
+				9479EED217F96686002DAA1B /* InfoPlist.strings in Resources */,
+				9479EEDB17F96686002DAA1B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9479EEE317F96686002DAA1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9479EEF117F96686002DAA1B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9479EEC017F96686002DAA1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9479EED417F96686002DAA1B /* main.m in Sources */,
+				9479EEDE17F96686002DAA1B /* RottenGuavaViewController.m in Sources */,
+				9479EED817F96686002DAA1B /* RottenGuavaAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9479EEE117F96686002DAA1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9479EEF317F96686002DAA1B /* RottenGuavasTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9479EEEB17F96686002DAA1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9479EEC317F96686002DAA1B /* RottenGuavas */;
+			targetProxy = 9479EEEA17F96686002DAA1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9479EED017F96686002DAA1B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9479EED117F96686002DAA1B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9479EED917F96686002DAA1B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9479EEDA17F96686002DAA1B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9479EEEF17F96686002DAA1B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9479EEF017F96686002DAA1B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9479EEF417F96686002DAA1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9479EEF517F96686002DAA1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9479EEF717F96686002DAA1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RottenGuavas/RottenGuavas-Prefix.pch";
+				INFOPLIST_FILE = "RottenGuavas/RottenGuavas-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9479EEF817F96686002DAA1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RottenGuavas/RottenGuavas-Prefix.pch";
+				INFOPLIST_FILE = "RottenGuavas/RottenGuavas-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9479EEFA17F96686002DAA1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RottenGuavas.app/RottenGuavas";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RottenGuavas/RottenGuavas-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RottenGuavasTests/RottenGuavasTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9479EEFB17F96686002DAA1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RottenGuavas.app/RottenGuavas";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RottenGuavas/RottenGuavas-Prefix.pch";
+				INFOPLIST_FILE = "RottenGuavasTests/RottenGuavasTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9479EEBF17F96686002DAA1B /* Build configuration list for PBXProject "RottenGuavas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9479EEF417F96686002DAA1B /* Debug */,
+				9479EEF517F96686002DAA1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9479EEF617F96686002DAA1B /* Build configuration list for PBXNativeTarget "RottenGuavas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9479EEF717F96686002DAA1B /* Debug */,
+				9479EEF817F96686002DAA1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9479EEF917F96686002DAA1B /* Build configuration list for PBXNativeTarget "RottenGuavasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9479EEFA17F96686002DAA1B /* Debug */,
+				9479EEFB17F96686002DAA1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9479EEBC17F96686002DAA1B /* Project object */;
+}
