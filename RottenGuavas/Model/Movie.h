@@ -17,7 +17,7 @@
 @property (readonly, nonatomic) int stars;
 @property (strong, nonatomic) NSArray *directors; // of NSString*
 @property (strong, nonatomic) NSArray *cast; // of NSString*
-
+@property (strong, nonatomic) NSString *consensus;
 
 - (id)initWithJSON: (NSDictionary*) json;
 

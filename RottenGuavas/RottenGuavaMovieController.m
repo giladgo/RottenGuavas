@@ -6,26 +6,30 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "RottenGuavaViewController.h"
+#import "RottenGuavaMovieController.h"
 #import "RottenTomatoesProvider.h"
+#import "CastTableViewCell.h"
 
-@interface RottenGuavaViewController ()
+@interface RottenGuavaMovieController () <UITableViewDataSource, UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *movieTitle;
 @property (weak, nonatomic) IBOutlet UILabel *stars;
 @property (weak, nonatomic) IBOutlet UIImageView *poster;
 @property (nonatomic, readwrite, strong) Movie *movie;
 @property (weak, nonatomic) IBOutlet UILabel *director;
 @property (weak, nonatomic) IBOutlet UILabel *featuring;
+@property (weak, nonatomic) IBOutlet UILabel *consensus;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
-@implementation RottenGuavaViewController
+@implementation RottenGuavaMovieController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     // Load the movie
-    self.movie = [RottenTomatoesProvider getMovie:23532];
+    self.movie = [RottenTomatoesProvider getMovie:12897];
     
     // Set the UI
 	self.movieTitle.text = self.movie.title;
@@ -34,7 +38,8 @@
     NSData * posterData = [NSData dataWithContentsOfURL:posterURL];
     self.poster.image = [UIImage imageWithData:posterData];
     self.director.text = (NSString*) self.movie.directors[0]; // Just show one
-    self.featuring.text = [NSString stringWithFormat:@"%@, %@",  self.movie.cast[0], self.movie.cast[1]];
+    self.featuring.text = [NSString stringWithFormat:@"%@, %@",  self.movie.cast[0][@"name"], self.movie.cast[1][@"name"]];
+    self.consensus.text = self.movie.consensus;
 }
 
 - (NSString *) starString
@@ -46,5 +51,26 @@
     return str;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.movie.cast.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"CastCell" forIndexPath:indexPath];
+    cell.textLabel.text = self.movie.cast[indexPath.row][@"name"];
+    cell.detailTextLabel.text = self.movie.cast[indexPath.row][@"characters"][0];
+    return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return @"Cast";
+    }
+    
+    return nil;
+}
 
 @end
