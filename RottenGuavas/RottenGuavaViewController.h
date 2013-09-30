@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Model/Movie.h"
 
 @interface RottenGuavaViewController : UIViewController
+
+@property (nonatomic, readonly, strong) Movie *movie;
 
 @end
