@@ -142,7 +142,7 @@
         <scene sceneID="cz5-Xh-IhE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EpG-cz-gU4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="In Theaters" id="vKZ-RS-eZ5"/>
+                    <tabBarItem key="tabBarItem" title="In Theaters" image="star.png" id="vKZ-RS-eZ5"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="bvt-3t-Cm4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X7i-1u-JpC">
@@ -221,7 +221,7 @@
         <scene sceneID="fTc-9J-UmR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qda-NR-ssD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="qVq-74-5CV"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search.png" id="qVq-74-5CV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="10A-Cr-yqP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -237,6 +237,10 @@
             <point key="canvasLocation" x="382" y="985"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="search.png" width="30" height="30"/>
+        <image name="star.png" width="27" height="26"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

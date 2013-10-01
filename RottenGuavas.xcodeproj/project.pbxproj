@@ -26,6 +26,8 @@
 		9487A02717FB064E005F3604 /* RottenGuavaSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487A02317FB064E005F3604 /* RottenGuavaSearchViewController.m */; };
 		9487A02817FB064E005F3604 /* RottenGuavaTopMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487A02517FB064E005F3604 /* RottenGuavaTopMoviesViewController.m */; };
 		9487A02B17FB08AF005F3604 /* RottenGuavaMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487A02A17FB08AF005F3604 /* RottenGuavaMoviesViewController.m */; };
+		9487A03317FB1AD5005F3604 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9487A03217FB1AD5005F3604 /* search@2x.png */; };
+		9487A03717FB1C30005F3604 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9487A03617FB1C30005F3604 /* star@2x.png */; };
 		FB64CEE3D07D4EA39BE52F5C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B31C9ED90B44048AC6A2B69 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		9487A02517FB064E005F3604 /* RottenGuavaTopMoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RottenGuavaTopMoviesViewController.m; path = ViewControllers/RottenGuavaTopMoviesViewController.m; sourceTree = "<group>"; };
 		9487A02917FB08AF005F3604 /* RottenGuavaMoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RottenGuavaMoviesViewController.h; path = ViewControllers/RottenGuavaMoviesViewController.h; sourceTree = "<group>"; };
 		9487A02A17FB08AF005F3604 /* RottenGuavaMoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RottenGuavaMoviesViewController.m; path = ViewControllers/RottenGuavaMoviesViewController.m; sourceTree = "<group>"; };
+		9487A03217FB1AD5005F3604 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		9487A03617FB1C30005F3604 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
 		C5341A2C1D9944E098A36197 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +137,8 @@
 		9479EECD17F96686002DAA1B /* RottenGuavas */ = {
 			isa = PBXGroup;
 			children = (
+				9487A03617FB1C30005F3604 /* star@2x.png */,
+				9487A03217FB1AD5005F3604 /* search@2x.png */,
 				9479EED917F96686002DAA1B /* Main.storyboard */,
 				9487A01F17FB0610005F3604 /* ViewControllers */,
 				9479EEDF17F96686002DAA1B /* Images.xcassets */,
@@ -278,6 +284,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9487A03317FB1AD5005F3604 /* search@2x.png in Resources */,
+				9487A03717FB1C30005F3604 /* star@2x.png in Resources */,
 				9479EEE017F96686002DAA1B /* Images.xcassets in Resources */,
 				9479EED217F96686002DAA1B /* InfoPlist.strings in Resources */,
 				9479EEDB17F96686002DAA1B /* Main.storyboard in Resources */,
