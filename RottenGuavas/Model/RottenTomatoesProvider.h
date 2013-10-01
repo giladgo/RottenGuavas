@@ -14,5 +14,6 @@
 + (Movie *)getMovie:(int) movieId;
 
 + (NSArray *)getInTheaters; // of Movie*
++ (NSArray *)search:(NSString*) query;  // of Movie*
 
 @end

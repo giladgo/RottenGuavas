@@ -18,6 +18,7 @@
         self.title = json[@"title"];
         self.criticsRating = [(NSNumber *)json[@"ratings"][@"critics_score"] intValue];
         self.posterURL = json[@"posters"][@"detailed"];
+        self.smallPosterURL = json[@"posters"][@"thumbnail"];
         self.directors = [(NSArray* )json[@"abridged_directors"] map:^id(NSDictionary* obj) {
             return obj[@"name"];
         }];

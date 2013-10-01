@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Model/Movie.h"
+#import "Movie.h"
 
 @interface RottenGuavaMovieController : UIViewController
 

@@ -8,7 +8,8 @@
 
 #import "RottenGuavaMovieController.h"
 #import "RottenTomatoesProvider.h"
-#import "CastTableViewCell.h"
+#import "dispatch/queue.h"
+#import "MBProgressHUD.h"
 
 @interface RottenGuavaMovieController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -28,9 +29,7 @@
 
 - (void)updateUI
 {
-    // Load the movie
-    self.movie = [RottenTomatoesProvider getMovie:self.movieId];
-    
+   
     // Set the UI
 	self.movieTitle.text = self.movie.title;
     self.stars.text = [self starString];
@@ -41,11 +40,20 @@
     self.featuring.text = [NSString stringWithFormat:@"%@, %@",  self.movie.cast[0][@"name"], self.movie.cast[1][@"name"]];
     self.consensus.text = self.movie.consensus;
     self.title = self.movie.title;
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad
 {
-    [self updateUI];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_queue_t dq = dispatch_queue_create("load movie DQ", NULL);
+    dispatch_async(dq, ^{
+        self.movie = [RottenTomatoesProvider getMovie:self.movieId];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self updateUI];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
 }
 
 - (NSString *) starString

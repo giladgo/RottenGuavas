@@ -7,11 +7,14 @@
 //
 
 #import "RottenGuavaTopMoviesViewController.h"
-#import "Model/RottenTomatoesProvider.h"
+#import "RottenTomatoesProvider.h"
 #import "RottenGuavaMovieController.h"
+#import "MBProgressHUD.h"
+#import "dispatch/queue.h"
 
 @interface RottenGuavaTopMoviesViewController ()
 @property (strong, nonatomic) NSArray *movies;
+@property (strong, nonatomic) NSArray *images; // of UIImage
 @end
 
 @implementation RottenGuavaTopMoviesViewController
@@ -25,12 +28,27 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_queue_t dq = dispatch_queue_create("load top movies", NULL);
+    dispatch_async(dq, ^{
+        if (!self.movies || !self.movies.count){
+            self.movies = [RottenTomatoesProvider getInTheaters];
+            [self.tableView reloadData];
+            
+            // preload the images
+            self.images = [self.movies map:^id(Movie* movie) {
+                return [UIImage imageWithData: [NSData dataWithContentsOfURL:[NSURL URLWithString:movie.posterURL]]];
+            }];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
     
-    self.clearsSelectionOnViewWillAppear = NO;
-    self.movies = [RottenTomatoesProvider getInTheaters];
 }
 
 
@@ -51,6 +69,7 @@
     
     Movie *movie = (Movie *)self.movies[indexPath.item];
     cell.textLabel.text = movie.title;
+    cell.imageView.image = self.images[indexPath.item];
     
     return cell;
 }

@@ -16,6 +16,7 @@
 #define API_KEY @"dcd729cesupbknfb8aqdgg59"
 #define GET_MOVIE_URL @"http://api.rottentomatoes.com/api/public/v1.0/movies/%d.json?apikey=" API_KEY
 #define IN_THEATERS_URL @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?page_limit=16&page=1&country=us&apikey=" API_KEY
+#define SEARCH_URL @"http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=%@&page_limit=10&page=1&apikey=" API_KEY
 
 + (NSDictionary *) doJSON:(NSString *)url
 {
@@ -50,6 +51,15 @@
 + (NSArray *)getInTheaters
 {
     NSDictionary* json = [RottenTomatoesProvider doJSON:IN_THEATERS_URL];
+    
+    return [(NSArray *)json[@"movies"] map:^id(NSDictionary* movieDict) {
+        return [[Movie alloc] initWithJSON:movieDict];
+    }];
+}
+
++ (NSArray *)search:(NSString*) query
+{
+    NSDictionary* json = [RottenTomatoesProvider doJSON:[NSString stringWithFormat:SEARCH_URL, [query stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
     
     return [(NSArray *)json[@"movies"] map:^id(NSDictionary* movieDict) {
         return [[Movie alloc] initWithJSON:movieDict];
