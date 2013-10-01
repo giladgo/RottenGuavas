@@ -11,5 +11,6 @@
 
 @interface RottenGuavaMovieController : UIViewController
 
+@property (nonatomic) int movieId;
 
 @end

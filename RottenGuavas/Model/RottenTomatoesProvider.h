@@ -13,4 +13,6 @@
 
 + (Movie *)getMovie:(int) movieId;
 
++ (NSArray *)getInTheaters; // of Movie*
+
 @end

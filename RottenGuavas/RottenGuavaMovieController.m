@@ -20,16 +20,16 @@
 @property (weak, nonatomic) IBOutlet UILabel *featuring;
 @property (weak, nonatomic) IBOutlet UILabel *consensus;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+- (void)updateUI;
 @end
 
 @implementation RottenGuavaMovieController
 
-- (void)viewDidLoad
+- (void)updateUI
 {
-    [super viewDidLoad];
-    
     // Load the movie
-    self.movie = [RottenTomatoesProvider getMovie:12897];
+    self.movie = [RottenTomatoesProvider getMovie:self.movieId];
     
     // Set the UI
 	self.movieTitle.text = self.movie.title;
@@ -40,6 +40,12 @@
     self.director.text = (NSString*) self.movie.directors[0]; // Just show one
     self.featuring.text = [NSString stringWithFormat:@"%@, %@",  self.movie.cast[0][@"name"], self.movie.cast[1][@"name"]];
     self.consensus.text = self.movie.consensus;
+    self.title = self.movie.title;
+}
+
+- (void)viewDidLoad
+{
+    [self updateUI];
 }
 
 - (NSString *) starString
