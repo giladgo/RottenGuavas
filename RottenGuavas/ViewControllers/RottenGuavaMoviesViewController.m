@@ -20,6 +20,12 @@
 
 @implementation RottenGuavaMoviesViewController
 
+-(void)viewDidLoad
+{
+    self.movies = [[NSMutableArray alloc] init];
+    self.images = [[NSMutableArray alloc] init];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
@@ -57,32 +63,37 @@
     rgmc.movieId = movie.id;
 }
 
-- (void)loadMoviesFromBlock:(NSArray*(^)(void))block
+
+- (void)loadMoviesFromBlock:(NSArray*(^)(void))block withAnimation:(BOOL)anim
 {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    if (anim) {
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    }
     
     
     dispatch_queue_t dq = dispatch_queue_create("load movies", NULL);
     dispatch_async(dq, ^{
-        if (!self.movies || !self.movies.count){
-            self.movies = block();
-            
-            // load the images
-            self.images = [[NSMutableArray alloc] initWithCapacity:self.movies.count];
-            for (int i = 0; i < self.movies.count; i++) {
-                [self.images addObject:[NSNull null]];
-                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-                    Movie *movie = self.movies[i];
-                    self.images[i] = [UIImage imageWithData: [NSData dataWithContentsOfURL:[NSURL URLWithString:movie.posterURL]]];
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
-                    });
+
+        int oldCount = self.movies.count;
+        [self.movies addObjectsFromArray:block()];
+        
+        // load the images
+        for (int i = oldCount; i < self.movies.count; i++) {
+            [self.images addObject:[NSNull null]];
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+                Movie *movie = self.movies[i];
+                self.images[i] = [UIImage imageWithData: [NSData dataWithContentsOfURL:[NSURL URLWithString:movie.posterURL]]];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
                 });
-            }
+            });
         }
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            if (anim) {
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+            }
         });
     });
 }

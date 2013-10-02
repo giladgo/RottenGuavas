@@ -15,8 +15,9 @@
 @implementation RottenTomatoesProvider
 #define API_KEY @"dcd729cesupbknfb8aqdgg59"
 #define GET_MOVIE_URL @"http://api.rottentomatoes.com/api/public/v1.0/movies/%d.json?apikey=" API_KEY
-#define IN_THEATERS_URL @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?page_limit=16&page=1&country=us&apikey=" API_KEY
-#define SEARCH_URL @"http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=%@&page_limit=10&page=1&apikey=" API_KEY
+#define IN_THEATERS_URL @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?page_limit=%d&page=%d&country=us&apikey=" API_KEY
+#define SEARCH_URL @"http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=%@&page_limit=%d&page=%d&apikey=" API_KEY
+#define UPCOMING_URL @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?page_limit=%d&page=%d&country=us&apikey=" API_KEY
 
 + (NSDictionary *) doJSON:(NSString *)url
 {
@@ -48,18 +49,30 @@
     return [[Movie alloc] initWithJSON:[RottenTomatoesProvider doJSON:[NSString stringWithFormat:GET_MOVIE_URL, movieId]]];
 }
 
-+ (NSArray *)getInTheaters
++ (NSArray *)getInTheaters:(int*)total withPage:(int)page withPageSize:(int)pageSize
 {
-    NSDictionary* json = [RottenTomatoesProvider doJSON:IN_THEATERS_URL];
+    NSDictionary* json = [RottenTomatoesProvider doJSON:[NSString stringWithFormat:IN_THEATERS_URL, pageSize, page]];
+    if (total) *total = [(NSNumber *)json[@"total"] integerValue];
     
     return [(NSArray *)json[@"movies"] map:^id(NSDictionary* movieDict) {
         return [[Movie alloc] initWithJSON:movieDict];
     }];
 }
 
-+ (NSArray *)search:(NSString*) query
++ (NSArray *)getUpcoming:(int*)total withPage:(int)page withPageSize:(int)pageSize
 {
-    NSDictionary* json = [RottenTomatoesProvider doJSON:[NSString stringWithFormat:SEARCH_URL, [query stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+    NSDictionary* json = [RottenTomatoesProvider doJSON:[NSString stringWithFormat:UPCOMING_URL, pageSize, page]];
+    if (total) *total = [(NSNumber *)json[@"total"] integerValue];
+    
+    return [(NSArray *)json[@"movies"] map:^id(NSDictionary* movieDict) {
+        return [[Movie alloc] initWithJSON:movieDict];
+    }];
+}
+
++ (NSArray *)search:(NSString*)query withTotal:(int*)total withPage:(int)page  withPageSize:(int)pageSize
+{
+    NSDictionary* json = [RottenTomatoesProvider doJSON:[NSString stringWithFormat:SEARCH_URL, [query stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], pageSize, page]];
+    if (total) *total = [(NSNumber *)json[@"total"] integerValue];
     
     return [(NSArray *)json[@"movies"] map:^id(NSDictionary* movieDict) {
         return [[Movie alloc] initWithJSON:movieDict];

@@ -11,6 +11,8 @@
 #import "RottenTomatoesProvider.h"
 #import "Movie.h"
 
+#define SEARCH_PAGE_SIZE 50
+
 @interface RottenGuavaSearchViewController () <UISearchBarDelegate>
 
 @end
@@ -29,7 +31,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 
 }
 
@@ -37,8 +38,9 @@
 {
     NSString* searchText = searchBar.text;
     [self loadMoviesFromBlock:^NSArray *{
-        return [RottenTomatoesProvider search:searchText];
-    }];
+        NSArray *arr =  [RottenTomatoesProvider search:searchText withTotal:NULL withPage:1 withPageSize:SEARCH_PAGE_SIZE];
+        return arr;
+    } withAnimation:YES];
     
     [searchBar endEditing:YES];
 }

@@ -10,8 +10,8 @@
 
 @interface RottenGuavaMoviesViewController : UITableViewController
 
-@property (strong, nonatomic) NSArray *movies; // of Movie*
+@property (strong, nonatomic) NSMutableArray *movies; // of Movie*
 @property (strong, nonatomic) NSMutableArray *images; // of UIImage*
 
-- (void)loadMoviesFromBlock:(NSArray*(^)(void))block;
+- (void)loadMoviesFromBlock:(NSArray*(^)(void))block withAnimation:(BOOL)anim;
 @end

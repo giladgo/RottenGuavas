@@ -28,6 +28,8 @@
 		9487A02B17FB08AF005F3604 /* RottenGuavaMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487A02A17FB08AF005F3604 /* RottenGuavaMoviesViewController.m */; };
 		9487A03317FB1AD5005F3604 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9487A03217FB1AD5005F3604 /* search@2x.png */; };
 		9487A03717FB1C30005F3604 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9487A03617FB1C30005F3604 /* star@2x.png */; };
+		9487A03A17FB1E40005F3604 /* RottenGuavaUpcomingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487A03917FB1E40005F3604 /* RottenGuavaUpcomingViewController.m */; };
+		9487A03C17FB1F13005F3604 /* upcoming@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9487A03B17FB1F13005F3604 /* upcoming@2x.png */; };
 		FB64CEE3D07D4EA39BE52F5C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B31C9ED90B44048AC6A2B69 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,9 @@
 		9487A02A17FB08AF005F3604 /* RottenGuavaMoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RottenGuavaMoviesViewController.m; path = ViewControllers/RottenGuavaMoviesViewController.m; sourceTree = "<group>"; };
 		9487A03217FB1AD5005F3604 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
 		9487A03617FB1C30005F3604 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		9487A03817FB1E40005F3604 /* RottenGuavaUpcomingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RottenGuavaUpcomingViewController.h; sourceTree = "<group>"; };
+		9487A03917FB1E40005F3604 /* RottenGuavaUpcomingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RottenGuavaUpcomingViewController.m; sourceTree = "<group>"; };
+		9487A03B17FB1F13005F3604 /* upcoming@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upcoming@2x.png"; sourceTree = "<group>"; };
 		C5341A2C1D9944E098A36197 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +142,7 @@
 		9479EECD17F96686002DAA1B /* RottenGuavas */ = {
 			isa = PBXGroup;
 			children = (
+				9487A03B17FB1F13005F3604 /* upcoming@2x.png */,
 				9487A03617FB1C30005F3604 /* star@2x.png */,
 				9487A03217FB1AD5005F3604 /* search@2x.png */,
 				9479EED917F96686002DAA1B /* Main.storyboard */,
@@ -201,6 +207,8 @@
 				9487A02517FB064E005F3604 /* RottenGuavaTopMoviesViewController.m */,
 				9487A02917FB08AF005F3604 /* RottenGuavaMoviesViewController.h */,
 				9487A02A17FB08AF005F3604 /* RottenGuavaMoviesViewController.m */,
+				9487A03817FB1E40005F3604 /* RottenGuavaUpcomingViewController.h */,
+				9487A03917FB1E40005F3604 /* RottenGuavaUpcomingViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -255,6 +263,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Gilad Goldberg";
 				TargetAttributes = {
+					9479EEC317F96686002DAA1B = {
+						DevelopmentTeam = C548T5A96A;
+					};
 					9479EEE417F96686002DAA1B = {
 						TestTargetID = 9479EEC317F96686002DAA1B;
 					};
@@ -288,6 +299,7 @@
 				9487A03717FB1C30005F3604 /* star@2x.png in Resources */,
 				9479EEE017F96686002DAA1B /* Images.xcassets in Resources */,
 				9479EED217F96686002DAA1B /* InfoPlist.strings in Resources */,
+				9487A03C17FB1F13005F3604 /* upcoming@2x.png in Resources */,
 				9479EEDB17F96686002DAA1B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +357,7 @@
 				9487A02B17FB08AF005F3604 /* RottenGuavaMoviesViewController.m in Sources */,
 				9479EEFE17F96950002DAA1B /* Movie.m in Sources */,
 				9487A02817FB064E005F3604 /* RottenGuavaTopMoviesViewController.m in Sources */,
+				9487A03A17FB1E40005F3604 /* RottenGuavaUpcomingViewController.m in Sources */,
 				9487A02717FB064E005F3604 /* RottenGuavaSearchViewController.m in Sources */,
 				9479EED817F96686002DAA1B /* RottenGuavaAppDelegate.m in Sources */,
 				9487A02617FB064E005F3604 /* RottenGuavaMovieController.m in Sources */,
@@ -475,11 +488,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RottenGuavas/RottenGuavas-Prefix.pch";
 				INFOPLIST_FILE = "RottenGuavas/RottenGuavas-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -490,11 +506,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RottenGuavas/RottenGuavas-Prefix.pch";
 				INFOPLIST_FILE = "RottenGuavas/RottenGuavas-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
