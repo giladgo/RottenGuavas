@@ -9,6 +9,7 @@
 #import "RottenGuavaTopMoviesViewController.h"
 #import "RottenGuavaMovieController.h"
 #import "RottenTomatoesProvider.h"
+#import "TopMoviesPaginator.h"
 
 #define TOP_MOVIES_PAGE_SIZE 16
 
@@ -18,25 +19,12 @@
 
 @implementation RottenGuavaTopMoviesViewController
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.item == self.movies.count - (TOP_MOVIES_PAGE_SIZE/2) && self.total > self.movies.count) {
-        [self loadMoviesFromBlock:^NSArray *{
-            return [RottenTomatoesProvider getInTheaters:NULL withPage:(self.movies.count / TOP_MOVIES_PAGE_SIZE) + 1 withPageSize:TOP_MOVIES_PAGE_SIZE];
-        } withAnimation:NO];
-    }
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self loadMoviesFromBlock:^NSArray *{
-        int total;
-        NSArray *arr = [RottenTomatoesProvider getInTheaters:&total withPage:1 withPageSize:TOP_MOVIES_PAGE_SIZE];
-        self.total = total;
-        return arr;
-    } withAnimation:YES];
-    
+    self.paginator = [[TopMoviesPaginator alloc] initWithPageSize:TOP_MOVIES_PAGE_SIZE delegate:self];
+    [self fetchFirstPage];
 }
+
+
 @end

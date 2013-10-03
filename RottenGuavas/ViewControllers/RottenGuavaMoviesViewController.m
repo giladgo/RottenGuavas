@@ -12,18 +12,43 @@
 #import "Movie.h"
 #import "MBProgressHUD.h"
 #import "dispatch/queue.h"
+#import "NMPaginator.h"
 
 
-@interface RottenGuavaMoviesViewController ()
-
+@interface RottenGuavaMoviesViewController () 
 @end
 
 @implementation RottenGuavaMoviesViewController
 
 -(void)viewDidLoad
 {
-    self.movies = [[NSMutableArray alloc] init];
+    [super viewDidLoad];
     self.images = [[NSMutableArray alloc] init];
+}
+
+- (void) fetchFirstPage
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self.paginator fetchFirstPage];
+}
+
+- (void)paginator:(id)paginator didReceiveResults:(NSArray *)results
+{
+    for (Movie* movie in results) {
+        [self.images addObject:[NSNull null]];
+    }
+    
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+    
+    // Instead of reloading the entire tableView, do this
+    NSMutableArray* indexPaths = [[NSMutableArray alloc] initWithCapacity:results.count];
+    for(int i = self.paginator.results.count - results.count; i < self.paginator.results.count; i++) {
+        [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
+    }
+    
+    [self.tableView beginUpdates];
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
+    [self.tableView endUpdates];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -35,19 +60,29 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return self.movies.count;
+    return self.paginator.results.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell" forIndexPath:indexPath];
     
-    Movie *movie = (Movie *)self.movies[indexPath.item];
+    Movie *movie = (Movie *)self.paginator.results[indexPath.row];
     cell.textLabel.text = movie.title;
-    if ([self.images[indexPath.item] isKindOfClass:[UIImage class]]) {
-        cell.imageView.image = self.images[indexPath.item];
+    
+    if ([self.images[indexPath.row] isKindOfClass:[NSNull class]]) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+            self.images[indexPath.row] = [UIImage imageWithData: [NSData dataWithContentsOfURL:[NSURL URLWithString:movie.posterURL]]];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            });
+        });
+        cell.imageView.image = nil; //until we load it
     }
-
+    else {
+        cell.imageView.image = self.images[indexPath.row];
+    }
+    
     return cell;
 }
 
@@ -55,16 +90,25 @@
     [self performSegueWithIdentifier:@"MovieSegue" sender:nil];
 }
 
-// In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     RottenGuavaMovieController *rgmc = (RottenGuavaMovieController *)[segue destinationViewController];
-    Movie* movie = (Movie *)self.movies[[self.tableView indexPathForSelectedRow].item];
+    Movie* movie = (Movie *)self.paginator.results[[self.tableView indexPathForSelectedRow].item];
     rgmc.movieId = movie.id;
 }
 
 
-- (void)loadMoviesFromBlock:(NSArray*(^)(void))block withAnimation:(BOOL)anim
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.item == self.paginator.results.count - ([self.paginator pageSize]/2)) {
+        if (![self.paginator reachedLastPage]) {
+            [self.paginator fetchNextPage];
+        }
+    }
+}
+
+/*
+- (void)loadMoviesPage:(int)pageNum withAnimation:(BOOL)anim
 {
     if (anim) {
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -75,8 +119,8 @@
     dispatch_async(dq, ^{
 
         int oldCount = self.movies.count;
-        [self.movies addObjectsFromArray:block()];
-        
+        [self.movies addObjectsFromArray:[self loadPage:pageNum]];
+
         // load the images
         for (int i = oldCount; i < self.movies.count; i++) {
             [self.images addObject:[NSNull null]];
@@ -96,5 +140,8 @@
             }
         });
     });
+    
+    self.lastPageQueuedForLoading++;
 }
+ */
 @end

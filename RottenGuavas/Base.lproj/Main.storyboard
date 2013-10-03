@@ -191,6 +191,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Search" id="kXq-1V-Cm7"/>
                     <connections>
+                        <outlet property="searchBar" destination="u19-Oq-KKl" id="elD-Fu-ERO"/>
                         <segue destination="vXZ-lx-hvc" kind="push" identifier="MovieSegue" id="LOq-CC-Cic"/>
                     </connections>
                 </tableViewController>
@@ -293,6 +294,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Zqg-MP-deG"/>
+        <segue reference="LOq-CC-Cic"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NMPaginator.h"
 
-@interface RottenGuavaMoviesViewController : UITableViewController
+@interface RottenGuavaMoviesViewController : UITableViewController <NMPaginatorDelegate>
 
 @property (strong, nonatomic) NSMutableArray *movies; // of Movie*
 @property (strong, nonatomic) NSMutableArray *images; // of UIImage*
+@property (nonatomic, strong) NMPaginator *paginator;
 
-- (void)loadMoviesFromBlock:(NSArray*(^)(void))block withAnimation:(BOOL)anim;
+- (void) fetchFirstPage;
+
 @end

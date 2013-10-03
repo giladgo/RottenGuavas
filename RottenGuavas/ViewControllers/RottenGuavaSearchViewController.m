@@ -9,40 +9,30 @@
 #import "RottenGuavaSearchViewController.h"
 #import "RottenGuavaMovieController.h"
 #import "RottenTomatoesProvider.h"
-#import "Movie.h"
+#import "SearchPaginator.h"
 
 #define SEARCH_PAGE_SIZE 50
 
 @interface RottenGuavaSearchViewController () <UISearchBarDelegate>
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
 @implementation RottenGuavaSearchViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.paginator = [[SearchPaginator alloc] initWithPageSize:SEARCH_PAGE_SIZE delegate:self];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    NSString* searchText = searchBar.text;
-    [self loadMoviesFromBlock:^NSArray *{
-        NSArray *arr =  [RottenTomatoesProvider search:searchText withTotal:NULL withPage:1 withPageSize:SEARCH_PAGE_SIZE];
-        return arr;
-    } withAnimation:YES];
-    
-    [searchBar endEditing:YES];
+    if ([searchBar.text length]) {
+        // Set the paginator's search term
+        [self fetchFirstPage];
+        [searchBar endEditing:YES];
+    }
 }
 
 @end
