@@ -53,13 +53,11 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
     return self.paginator.results.count;
 }
 
@@ -107,41 +105,4 @@
     }
 }
 
-/*
-- (void)loadMoviesPage:(int)pageNum withAnimation:(BOOL)anim
-{
-    if (anim) {
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    }
-    
-    
-    dispatch_queue_t dq = dispatch_queue_create("load movies", NULL);
-    dispatch_async(dq, ^{
-
-        int oldCount = self.movies.count;
-        [self.movies addObjectsFromArray:[self loadPage:pageNum]];
-
-        // load the images
-        for (int i = oldCount; i < self.movies.count; i++) {
-            [self.images addObject:[NSNull null]];
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-                Movie *movie = self.movies[i];
-                self.images[i] = [UIImage imageWithData: [NSData dataWithContentsOfURL:[NSURL URLWithString:movie.posterURL]]];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
-                });
-            });
-        }
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-            if (anim) {
-                [MBProgressHUD hideHUDForView:self.view animated:YES];
-            }
-        });
-    });
-    
-    self.lastPageQueuedForLoading++;
-}
- */
 @end
