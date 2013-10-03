@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "NMPaginator.h"
+#import "MoviesPaginator.h"
 
-@interface TopMoviesPaginator : NMPaginator
+@interface TopMoviesPaginator : MoviesPaginator
 
 @end

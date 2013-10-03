@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "NMPaginator.h"
+#import "MoviesPaginator.h"
 
-@interface SearchPaginator : NMPaginator
+@interface SearchPaginator : MoviesPaginator
 
 @property (strong, nonatomic) NSString *searchText;
 

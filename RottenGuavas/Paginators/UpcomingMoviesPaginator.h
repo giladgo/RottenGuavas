@@ -6,10 +6,9 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "NMPaginator.h"
+#import "MoviesPaginator.h"
 
 
-@interface UpcomingMoviesPaginator : NMPaginator
+@interface UpcomingMoviesPaginator : MoviesPaginator
 
 @end
