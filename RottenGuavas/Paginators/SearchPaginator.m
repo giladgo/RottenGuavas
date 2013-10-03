@@ -14,9 +14,18 @@
 - (void)fetchResultsWithPage:(NSInteger)page pageSize:(NSInteger)pageSize
 {
     // Blocking for now, empty for now
-    int total;
-    NSArray *arr = [RottenTomatoesProvider search:@"" withTotal:&total withPage:page withPageSize:pageSize];
-    [self receivedResults:arr total:total];
+    
+    __block int total;
+    
+    dispatch_queue_t dq = dispatch_queue_create("top movies DQ", NULL);
+    
+    dispatch_async(dq, ^{
+        NSArray *arr = [RottenTomatoesProvider search:self.searchText withTotal:&total withPage:page withPageSize:pageSize];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self receivedResults:arr total:total];
+        });
+    });
 }
 
 @end

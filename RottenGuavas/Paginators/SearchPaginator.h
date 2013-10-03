@@ -10,4 +10,6 @@
 
 @interface SearchPaginator : NMPaginator
 
+@property (strong, nonatomic) NSString *searchText;
+
 @end

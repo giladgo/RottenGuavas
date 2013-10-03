@@ -29,9 +29,10 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     if ([searchBar.text length]) {
-        // Set the paginator's search term
-        [self fetchFirstPage];
+        ((SearchPaginator*)self.paginator).searchText = searchBar.text;
         [searchBar endEditing:YES];
+        
+        [self fetchFirstPage];
     }
 }
 
