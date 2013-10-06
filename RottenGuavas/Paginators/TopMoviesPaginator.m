@@ -15,7 +15,7 @@
 
 - (NSArray *)resultsBlocking:(int*)total withPage:(int)page withPageSize:(int)pageSize
 {
-    return [RottenTomatoesProvider getInTheaters:total withPage:page withPageSize:pageSize];
+    return [RottenTomatoesProvider getInTheaters:total withPage:page withPageSize:pageSize fromCountryCode:self.countryCode];
 }
 
 @end

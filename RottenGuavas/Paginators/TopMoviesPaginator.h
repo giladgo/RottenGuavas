@@ -10,4 +10,6 @@
 
 @interface TopMoviesPaginator : MoviesPaginator
 
+@property (nonatomic, strong) NSString *countryCode;
+
 @end

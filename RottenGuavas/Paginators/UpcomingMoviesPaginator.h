@@ -11,4 +11,6 @@
 
 @interface UpcomingMoviesPaginator : MoviesPaginator
 
+@property (nonatomic, strong) NSString *countryCode;
+
 @end

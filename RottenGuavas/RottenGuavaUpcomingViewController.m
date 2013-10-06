@@ -20,8 +20,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.paginator = [[UpcomingMoviesPaginator alloc] initWithPageSize:UPCOMING_PAGE_SIZE delegate:self];
     [self fetchFirstPage];
+}
+
+- (NMPaginator *)createPaginator
+{
+    return [[UpcomingMoviesPaginator alloc] initWithPageSize:UPCOMING_PAGE_SIZE delegate:self];
 }
 
 

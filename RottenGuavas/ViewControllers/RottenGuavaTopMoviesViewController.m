@@ -11,6 +11,7 @@
 #import "RottenTomatoesProvider.h"
 #import "TopMoviesPaginator.h"
 
+
 #define TOP_MOVIES_PAGE_SIZE 16
 
 @interface RottenGuavaTopMoviesViewController ()
@@ -22,9 +23,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.paginator = [[TopMoviesPaginator alloc] initWithPageSize:TOP_MOVIES_PAGE_SIZE delegate:self];
     [self fetchFirstPage];
 }
 
+- (NMPaginator *)createPaginator
+{
+    return [[TopMoviesPaginator alloc] initWithPageSize:TOP_MOVIES_PAGE_SIZE delegate:self];
+}
 
 @end

@@ -13,8 +13,8 @@
 
 + (Movie *)getMovie:(int) movieId;
 
-+ (NSArray *)getInTheaters:(int*)total withPage:(int)page withPageSize:(int)pageSize; // of Movie*
++ (NSArray *)getInTheaters:(int*)total withPage:(int)page withPageSize:(int)pageSize fromCountryCode:(NSString *)countryCode; // of Movie*
 + (NSArray *)search:(NSString*)query withTotal:(int*)total withPage:(int)page  withPageSize:(int)pageSize;  // of Movie*
-+ (NSArray *)getUpcoming:(int*)total withPage:(int)page withPageSize:(int)pageSize; // of Movie*
++ (NSArray *)getUpcoming:(int*)total withPage:(int)page withPageSize:(int)pageSize fromCountryCode:(NSString *)countryCode; // of Movie*
 
 @end

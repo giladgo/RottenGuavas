@@ -17,4 +17,6 @@
 
 - (void) fetchFirstPage;
 
+- (NMPaginator*) createPaginator;
+
 @end

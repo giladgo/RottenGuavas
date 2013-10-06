@@ -29,6 +29,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="In Theaters" id="DFH-ou-elk"/>
                     <connections>
+                        <outlet property="navItem" destination="DFH-ou-elk" id="HcQ-9T-WlQ"/>
                         <segue destination="vXZ-lx-hvc" kind="push" identifier="MovieSegue" id="LvQ-XP-BlZ"/>
                     </connections>
                 </tableViewController>
@@ -222,6 +223,9 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Upcoming" id="mfo-6B-BLO"/>
+                    <connections>
+                        <outlet property="navItem" destination="mfo-6B-BLO" id="WvB-TI-5K9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pey-tR-2HI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,7 +265,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dX7-9q-rEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-161" y="702"/>
+            <point key="canvasLocation" x="-191" y="985"/>
         </scene>
         <!--Navigation Controller - Search-->
         <scene sceneID="fTc-9J-UmR">
@@ -294,6 +298,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="LOq-CC-Cic"/>
+        <segue reference="Zqg-MP-deG"/>
     </inferredMetricsTieBreakers>
 </document>

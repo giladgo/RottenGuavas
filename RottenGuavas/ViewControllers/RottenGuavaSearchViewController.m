@@ -20,10 +20,9 @@
 
 @implementation RottenGuavaSearchViewController
 
-- (void)viewDidLoad
+- (NMPaginator *)createPaginator
 {
-    [super viewDidLoad];
-    self.paginator = [[SearchPaginator alloc] initWithPageSize:SEARCH_PAGE_SIZE delegate:self];
+    return [[SearchPaginator alloc] initWithPageSize:SEARCH_PAGE_SIZE delegate:self];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar

@@ -17,9 +17,15 @@
 
 @interface RottenGuavaMoviesViewController ()
 @property (strong, nonatomic) UIImage *defaultPosterImage;
+@property (strong, nonatomic) NSMutableArray *loadingImages;
 @end
 
 @implementation RottenGuavaMoviesViewController
+
+-(NMPaginator *)createPaginator
+{
+    return nil;
+}
 
 - (UIImage*)defaultPosterImage
 {
@@ -34,6 +40,8 @@
 {
     [super viewDidLoad];
     self.images = [[NSMutableArray alloc] init];
+    self.loadingImages = [[NSMutableArray alloc] init];
+    self.paginator = [self createPaginator];
 }
 
 - (void) fetchFirstPage
@@ -46,6 +54,7 @@
 {
     for (Movie* movie in results) {
         [self.images addObject:self.defaultPosterImage];
+        [self.loadingImages addObject:[NSNumber numberWithBool:NO]];
     }
     
     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
@@ -78,12 +87,14 @@
     Movie *movie = (Movie *)self.paginator.results[indexPath.row];
     cell.textLabel.text = movie.title;
     
-    if (self.images[indexPath.row] == self.defaultPosterImage) {
+    if (self.images[indexPath.row] == self.defaultPosterImage && ![self.loadingImages[indexPath.row] boolValue]) {
+        self.loadingImages[indexPath.row] = [NSNumber numberWithBool:YES];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
             NSLog(@"%@ %@", movie.title, movie.posterURL);
             self.images[indexPath.row] = [UIImage imageWithData: [NSData dataWithContentsOfURL:[NSURL URLWithString:movie.posterURL]]];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+                self.loadingImages[indexPath.row] = [NSNumber numberWithBool:NO];
             });
         });
         cell.imageView.image = self.defaultPosterImage; //until we load it

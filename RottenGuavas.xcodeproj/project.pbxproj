@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9417570A1801B7AB001A7626 /* RottenGuavaLocationMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 941757091801B7AB001A7626 /* RottenGuavaLocationMoviesViewController.m */; };
 		9479EEC817F96686002DAA1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9479EEC717F96686002DAA1B /* Foundation.framework */; };
 		9479EECA17F96686002DAA1B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9479EEC917F96686002DAA1B /* CoreGraphics.framework */; };
 		9479EECC17F96686002DAA1B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9479EECB17F96686002DAA1B /* UIKit.framework */; };
@@ -50,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		1B31C9ED90B44048AC6A2B69 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		941757081801B7AB001A7626 /* RottenGuavaLocationMoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RottenGuavaLocationMoviesViewController.h; path = ViewControllers/RottenGuavaLocationMoviesViewController.h; sourceTree = "<group>"; };
+		941757091801B7AB001A7626 /* RottenGuavaLocationMoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RottenGuavaLocationMoviesViewController.m; path = ViewControllers/RottenGuavaLocationMoviesViewController.m; sourceTree = "<group>"; };
 		9479EEC417F96686002DAA1B /* RottenGuavas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RottenGuavas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9479EEC717F96686002DAA1B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9479EEC917F96686002DAA1B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -248,6 +251,8 @@
 				9487A02517FB064E005F3604 /* RottenGuavaTopMoviesViewController.m */,
 				9487A03817FB1E40005F3604 /* RottenGuavaUpcomingViewController.h */,
 				9487A03917FB1E40005F3604 /* RottenGuavaUpcomingViewController.m */,
+				941757081801B7AB001A7626 /* RottenGuavaLocationMoviesViewController.h */,
+				941757091801B7AB001A7626 /* RottenGuavaLocationMoviesViewController.m */,
 			);
 			name = Specific;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 				9487A02817FB064E005F3604 /* RottenGuavaTopMoviesViewController.m in Sources */,
 				9487A03A17FB1E40005F3604 /* RottenGuavaUpcomingViewController.m in Sources */,
 				9487A02717FB064E005F3604 /* RottenGuavaSearchViewController.m in Sources */,
+				9417570A1801B7AB001A7626 /* RottenGuavaLocationMoviesViewController.m in Sources */,
 				9479EED817F96686002DAA1B /* RottenGuavaAppDelegate.m in Sources */,
 				9487A02617FB064E005F3604 /* RottenGuavaMovieController.m in Sources */,
 				94D754AD17FD8F2100B46D40 /* SearchPaginator.m in Sources */,
