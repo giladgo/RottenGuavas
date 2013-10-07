@@ -10,6 +10,7 @@
 #import "RottenTomatoesProvider.h"
 #import "dispatch/queue.h"
 #import "MBProgressHUD.h"
+#import "RottenGuavaTrailerViewController.h"
 
 @interface RottenGuavaMovieController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -36,8 +37,16 @@
     NSURL * posterURL = [NSURL URLWithString:self.movie.posterURL];
     NSData * posterData = [NSData dataWithContentsOfURL:posterURL];
     self.poster.image = [UIImage imageWithData:posterData];
-    self.director.text = (NSString*) self.movie.directors[0]; // Just show one
-    self.featuring.text = [NSString stringWithFormat:@"%@, %@",  self.movie.cast[0][@"name"], self.movie.cast[1][@"name"]];
+    if (self.movie.directors.count) {
+        self.director.text = (NSString*) self.movie.directors[0]; // Just show one
+    }
+    if (self.movie.cast.count > 1) {
+        self.featuring.text = [NSString stringWithFormat:@"%@, %@",  self.movie.cast[0][@"name"], self.movie.cast[1][@"name"]];
+    }
+    else if (self.movie.cast.count) {
+        self.featuring.text = self.movie.cast[0][@"name"];
+    }
+    
     self.consensus.text = self.movie.consensus;
     self.title = self.movie.title;
     [self.tableView reloadData];
@@ -74,8 +83,24 @@
 {
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"CastCell" forIndexPath:indexPath];
     cell.textLabel.text = self.movie.cast[indexPath.row][@"name"];
-    cell.detailTextLabel.text = self.movie.cast[indexPath.row][@"characters"][0];
+    NSArray *characters = (NSArray *)self.movie.cast[indexPath.row][@"characters"];
+    if (characters.count) {
+        cell.detailTextLabel.text = characters[0];
+    }
     return cell;
+}
+
+
+- (IBAction)viewTrailer:(id)sender {
+    [self performSegueWithIdentifier:@"Trailer" sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Trailer"]) {
+        RottenGuavaTrailerViewController *rgtvc = (RottenGuavaTrailerViewController *)segue.destinationViewController;
+        rgtvc.movie = self.movie;
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
