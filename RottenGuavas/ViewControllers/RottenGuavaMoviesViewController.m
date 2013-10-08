@@ -121,7 +121,7 @@
 {
     RottenGuavaMovieController *rgmc = (RottenGuavaMovieController *)[segue destinationViewController];
     Movie* movie = (Movie *)self.paginator.results[[self.tableView indexPathForSelectedRow].item];
-    rgmc.movieId = movie.id;
+    rgmc.movie = movie;
 }
 
 

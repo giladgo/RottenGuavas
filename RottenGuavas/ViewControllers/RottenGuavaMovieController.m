@@ -9,7 +9,6 @@
 #import "RottenGuavaMovieController.h"
 #import "RottenTomatoesProvider.h"
 #import "dispatch/queue.h"
-#import "MBProgressHUD.h"
 #import "RottenGuavaTrailerViewController.h"
 
 @interface RottenGuavaMovieController () <UITableViewDataSource, UITableViewDelegate>
@@ -17,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *movieTitle;
 @property (weak, nonatomic) IBOutlet UILabel *stars;
 @property (weak, nonatomic) IBOutlet UIImageView *poster;
-@property (nonatomic, readwrite, strong) Movie *movie;
 @property (weak, nonatomic) IBOutlet UILabel *director;
 @property (weak, nonatomic) IBOutlet UILabel *featuring;
 @property (weak, nonatomic) IBOutlet UILabel *consensus;
@@ -71,18 +69,7 @@
 
 - (void)viewDidLoad
 {
-
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [self updateUI]; // show blank until we load everything
-    dispatch_queue_t dq = dispatch_queue_create("load movie DQ", NULL);
-    dispatch_async(dq, ^{
-        self.movie = [RottenTomatoesProvider getMovie:self.movieId];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self updateUI];
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-        });
-    });
-    
+    [self updateUI];
 }
 
 - (NSString *) starString
