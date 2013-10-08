@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *featuring;
 @property (weak, nonatomic) IBOutlet UILabel *consensus;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tvHeightConstraint;
 
 - (void)updateUI;
 @end
@@ -56,6 +57,16 @@
     self.consensus.text = self.movie.consensus;
     self.title = self.movie.title;
     [self.tableView reloadData];
+    
+    if (self.movie.cast.count) {
+        CGFloat totalHeight = self.tableView.rowHeight * [self.movie.cast count] + self.tableView.sectionHeaderHeight;
+        NSLog(@"totalHeight = %f", totalHeight);
+        self.tvHeightConstraint.constant = totalHeight;
+        [self.view layoutSubviews];
+        self.tableView.hidden = NO;
+    } else {
+        self.tableView.hidden = YES;
+    }
 }
 
 - (void)viewDidLoad
@@ -71,6 +82,7 @@
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         });
     });
+    
 }
 
 - (NSString *) starString
@@ -122,5 +134,7 @@
     
     return nil;
 }
+
+
 
 @end

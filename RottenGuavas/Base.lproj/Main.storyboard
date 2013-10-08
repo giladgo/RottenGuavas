@@ -58,7 +58,7 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="hUl-KZ-E0Y"/>
+                                            <constraint firstAttribute="height" constant="300" id="7GO-Rz-mLX"/>
                                         </constraints>
                                         <prototypes>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="CastCell" textLabel="wWM-f0-0qM" detailTextLabel="z5J-d4-pPS" style="IBUITableViewCellStyleValue1" id="dFb-wm-4E9">
@@ -190,6 +190,7 @@
                         <outlet property="poster" destination="8Gf-Cq-Rba" id="JrN-cr-U8W"/>
                         <outlet property="stars" destination="nte-3a-yrS" id="f9Y-GK-HUZ"/>
                         <outlet property="tableView" destination="wPX-Gc-r3e" id="KTm-rt-Rqi"/>
+                        <outlet property="tvHeightConstraint" destination="7GO-Rz-mLX" id="sgt-gU-FYN"/>
                         <segue destination="ksd-TN-CYJ" kind="push" identifier="Trailer" id="Qtp-Qp-eke"/>
                     </connections>
                 </viewController>
