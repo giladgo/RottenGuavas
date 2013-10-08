@@ -13,8 +13,7 @@
 
 @property (strong, nonatomic) NSMutableArray *movies; // of Movie*
 @property (strong, nonatomic) NSMutableArray *images; // of UIImage*
-@property (nonatomic, strong) NMPaginator *paginator;
-
+@property (nonatomic, strong, readonly) NMPaginator *paginator;
 - (void) fetchFirstPage;
 
 - (NMPaginator*) createPaginator;

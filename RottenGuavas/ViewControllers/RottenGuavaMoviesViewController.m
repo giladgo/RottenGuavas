@@ -18,6 +18,7 @@
 @interface RottenGuavaMoviesViewController ()
 @property (strong, nonatomic) UIImage *defaultPosterImage;
 @property (strong, nonatomic) NSMutableArray *loadingImages;
+@property (nonatomic, strong) NMPaginator *paginator;
 @end
 
 @implementation RottenGuavaMoviesViewController
@@ -39,14 +40,20 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    self.images = [[NSMutableArray alloc] init];
-    self.loadingImages = [[NSMutableArray alloc] init];
-    self.paginator = [self createPaginator];
+    
 }
 
 - (void) fetchFirstPage
 {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    self.paginator = [self createPaginator];
+    
+    self.images = [[NSMutableArray alloc] init];
+    self.loadingImages = [[NSMutableArray alloc] init];
+    
+    [self.tableView reloadData];
+    
     [self.paginator fetchFirstPage];
 }
 

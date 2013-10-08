@@ -48,11 +48,12 @@
                 NSString *embedURL = [NSString stringWithFormat:@"http://www.youtube.com/embed/%@", firstVideoId];
                 
                
-                NSString *html = @"\
+                NSString *html = @"<html style=\"width:100%;height:100%\"><body style=\"margin:0;padding:0;width:100%;height:100%\">\
                  <object>\
                  <param name=\"movie\" value=\"http://www.youtube.com/v/%@\"></param>\
-                 <embed src=\"http://www.youtube.com/v/%@\" type=\"application/x-shockwave-flash\"></embed>\
+                 <embed src=\"http://www.youtube.com/v/%@\" type=\"application/x-shockwave-flash\" style=\"width:100%;height:100%\"></embed>\
                  </object>\
+                </body></html>\
                 ";
                 
                 html = [NSString stringWithFormat:html, firstVideoId, firstVideoId];

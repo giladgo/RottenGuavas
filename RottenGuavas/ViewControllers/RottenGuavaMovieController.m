@@ -40,11 +40,17 @@
     if (self.movie.directors.count) {
         self.director.text = (NSString*) self.movie.directors[0]; // Just show one
     }
+    else {
+        self.director.text = nil;
+    }
     if (self.movie.cast.count > 1) {
         self.featuring.text = [NSString stringWithFormat:@"%@, %@",  self.movie.cast[0][@"name"], self.movie.cast[1][@"name"]];
     }
     else if (self.movie.cast.count) {
         self.featuring.text = self.movie.cast[0][@"name"];
+    }
+    else {
+        self.featuring.text = nil;
     }
     
     self.consensus.text = self.movie.consensus;
@@ -54,7 +60,9 @@
 
 - (void)viewDidLoad
 {
+
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self updateUI]; // show blank until we load everything
     dispatch_queue_t dq = dispatch_queue_create("load movie DQ", NULL);
     dispatch_async(dq, ^{
         self.movie = [RottenTomatoesProvider getMovie:self.movieId];
@@ -68,8 +76,11 @@
 - (NSString *) starString
 {
     NSMutableString *str = [[NSMutableString alloc] initWithCapacity:5];
-    [str appendString:[@"★★★★★" substringToIndex:self.movie.stars]];
-    [str appendString:[@"☆☆☆☆☆" substringToIndex:5 - self.movie.stars]];
+    
+    if (self.movie) {
+        [str appendString:[@"★★★★★" substringToIndex:self.movie.stars]];
+        [str appendString:[@"☆☆☆☆☆" substringToIndex:5 - self.movie.stars]];
+    }
     
     return str;
 }

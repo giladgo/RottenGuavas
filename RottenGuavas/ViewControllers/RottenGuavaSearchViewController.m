@@ -20,17 +20,23 @@
 
 @implementation RottenGuavaSearchViewController
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self.searchBar becomeFirstResponder];
+}
+
 - (NMPaginator *)createPaginator
 {
-    return [[SearchPaginator alloc] initWithPageSize:SEARCH_PAGE_SIZE delegate:self];
+    SearchPaginator *paginator = [[SearchPaginator alloc] initWithPageSize:SEARCH_PAGE_SIZE delegate:self];
+    paginator.searchText = self.searchBar.text;
+    return paginator;
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     if ([searchBar.text length]) {
-        ((SearchPaginator*)self.paginator).searchText = searchBar.text;
         [searchBar endEditing:YES];
-        
         [self fetchFirstPage];
     }
 }
