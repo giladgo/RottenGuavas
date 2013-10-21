@@ -58,7 +58,6 @@
     
     if (self.movie.cast.count) {
         CGFloat totalHeight = self.tableView.rowHeight * [self.movie.cast count] + self.tableView.sectionHeaderHeight;
-        NSLog(@"totalHeight = %f", totalHeight);
         self.tvHeightConstraint.constant = totalHeight;
         [self.view layoutSubviews];
         self.tableView.hidden = NO;

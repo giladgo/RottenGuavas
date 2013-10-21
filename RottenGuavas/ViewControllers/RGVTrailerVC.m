@@ -44,7 +44,6 @@
             }
             
             if (firstVideoId) {
-                NSLog(@"Got ID: %@", firstVideoId);
                 NSString *embedURL = [NSString stringWithFormat:@"http://www.youtube.com/embed/%@", firstVideoId];
                 
                

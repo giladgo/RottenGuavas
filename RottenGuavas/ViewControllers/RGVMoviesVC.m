@@ -32,7 +32,6 @@
 {
     if (!_defaultPosterImage) {
         _defaultPosterImage = [UIImage imageNamed:@"poster_default.gif"];
-        NSLog(@"%p", _defaultPosterImage);
     }
     return _defaultPosterImage;
 }
@@ -97,10 +96,9 @@
     if (self.images[indexPath.row] == self.defaultPosterImage && ![self.loadingImages[indexPath.row] boolValue]) {
         self.loadingImages[indexPath.row] = [NSNumber numberWithBool:YES];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-            NSLog(@"%@ %@", movie.title, movie.posterURL);
             self.images[indexPath.row] = [UIImage imageWithData: [NSData dataWithContentsOfURL:[NSURL URLWithString:movie.posterURL]]];
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+                [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
                 self.loadingImages[indexPath.row] = [NSNumber numberWithBool:NO];
             });
         });

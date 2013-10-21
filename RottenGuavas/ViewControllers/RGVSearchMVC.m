@@ -27,17 +27,24 @@
 
 - (NMPaginator *)createPaginator
 {
-    RGVSearchPaginator *paginator = [[RGVSearchPaginator alloc] initWithPageSize:SEARCH_PAGE_SIZE delegate:self];
-    paginator.searchText = self.searchBar.text;
-    return paginator;
+    return [[RGVSearchPaginator alloc] initWithPageSize:SEARCH_PAGE_SIZE delegate:self];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    if ([searchBar.text length]) {
-        [searchBar endEditing:YES];
-        [self fetchFirstPage];
+    if ([self.paginator isKindOfClass:[RGVSearchPaginator class]]) {
+        RGVSearchPaginator *paginator = (RGVSearchPaginator *)self.paginator;
+        paginator.searchText = searchBar.text;
+        if ([searchBar.text length]) {
+            [searchBar endEditing:YES];
+            [self fetchFirstPage];
+        }
     }
+    
 }
+- (IBAction)tableTap:(id)sender {
+    [self.searchBar resignFirstResponder];
+}
+
 
 @end
