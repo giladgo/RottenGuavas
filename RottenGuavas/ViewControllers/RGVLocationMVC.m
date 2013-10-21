@@ -7,6 +7,7 @@
 //
 
 #import "RGVLocationMVC.h"
+#import "../Paginators/RGVMoviesPaginator.h"
 #import <CoreLocation/CoreLocation.h>
 
 @interface RGVLocationMVC () <CLLocationManagerDelegate>
@@ -42,17 +43,12 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     [self.locationManager stopUpdatingLocation];
-    
-    NSLog(@"location manager callback");    
-    if (![self.paginator respondsToSelector:@selector(countryCode)]) {
-        NSLog(@"whoops");
+    if (![self.paginator conformsToProtocol:@protocol(RGVCountryPaginator)]) {
         [super fetchFirstPage];
         return;
     }
     
-    if ([self.paginator performSelector:@selector(countryCode)]) {
-        return;
-    }
+    id<RGVCountryPaginator> ccPaginator = (id<RGVCountryPaginator>)self.paginator;
     
     for (CLLocation* newLocation in locations)
     {
@@ -60,8 +56,7 @@
             if (!error) {
                 // When reverse-geocoding we should get only one element
                 CLPlacemark* placeMark = [placemarks firstObject];
-                [self.paginator performSelector:@selector(setCountryCode:) withObject:placeMark.ISOcountryCode];
-                NSLog(@"c = %@", placeMark.country);
+                [ccPaginator setCountryCode:placeMark.ISOcountryCode];
                 self.navItem.title = [NSString stringWithFormat:@"%@ - %@", self.navItem.title, placeMark.country];
             }
             

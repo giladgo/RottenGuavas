@@ -41,13 +41,13 @@
 {
     [super viewDidLoad];
     
+    self.paginator = [self createPaginator];
+    
 }
 
 - (void) fetchFirstPage
 {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    
-    self.paginator = [self createPaginator];
     
     self.images = [[NSMutableArray alloc] init];
     self.loadingImages = [[NSMutableArray alloc] init];

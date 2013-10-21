@@ -8,6 +8,12 @@
 
 #import "NMPaginator.h"
 
+@protocol RGVCountryPaginator <NSObject>
+
+@property (nonatomic, strong) NSString *countryCode;
+
+@end
+
 @interface RGVMoviesPaginator : NMPaginator
 - (NSArray *)resultsBlocking:(int*)total withPage:(int)page withPageSize:(int)pageSize;
 @end

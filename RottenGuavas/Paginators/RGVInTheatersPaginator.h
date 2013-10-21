@@ -8,7 +8,7 @@
 
 #import "RGVMoviesPaginator.h"
 
-@interface RGVInTheatersPaginator : RGVMoviesPaginator
+@interface RGVInTheatersPaginator : RGVMoviesPaginator <RGVCountryPaginator>
 
 @property (nonatomic, strong) NSString *countryCode;
 
