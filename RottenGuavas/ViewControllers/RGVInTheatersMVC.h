@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RottenGuavaLocationMoviesViewController.h"
+#import "RGVLocationMVC.h"
 
-@interface RottenGuavaTopMoviesViewController : RottenGuavaLocationMoviesViewController
+@interface RGVInTheatersMVC : RGVLocationMVC
 
 @end

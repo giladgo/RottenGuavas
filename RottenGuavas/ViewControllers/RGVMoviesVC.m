@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "RottenGuavaMoviesViewController.h"
-#import "RottenGuavaMovieController.h"
+#import "RGVMoviesVC.h"
+#import "RGVMovieVC.h"
 #import "RottenTomatoesProvider.h"
 #import "Movie.h"
 #import "MBProgressHUD.h"
@@ -15,13 +15,13 @@
 #import "NMPaginator.h"
 
 
-@interface RottenGuavaMoviesViewController ()
+@interface RGVMoviesVC ()
 @property (strong, nonatomic) UIImage *defaultPosterImage;
 @property (strong, nonatomic) NSMutableArray *loadingImages;
 @property (nonatomic, strong) NMPaginator *paginator;
 @end
 
-@implementation RottenGuavaMoviesViewController
+@implementation RGVMoviesVC
 
 -(NMPaginator *)createPaginator
 {
@@ -119,7 +119,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    RottenGuavaMovieController *rgmc = (RottenGuavaMovieController *)[segue destinationViewController];
+    RGVMovieVC *rgmc = (RGVMovieVC *)[segue destinationViewController];
     Movie* movie = (Movie *)self.paginator.results[[self.tableView indexPathForSelectedRow].item];
     rgmc.movie = movie;
 }

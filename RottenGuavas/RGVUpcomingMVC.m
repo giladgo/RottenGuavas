@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "RottenGuavaUpcomingViewController.h"
+#import "RGVUpcomingMVC.h"
 #import "RottenTomatoesProvider.h"
-#import "UpcomingMoviesPaginator.h"
+#import "RGVUpcomingPaginator.h"
 
 #define UPCOMING_PAGE_SIZE 16
 
-@interface RottenGuavaUpcomingViewController ()
+@interface RGVUpcomingMVC ()
 @end
 
-@implementation RottenGuavaUpcomingViewController
+@implementation RGVUpcomingMVC
 
 - (void)viewDidLoad
 {
@@ -25,7 +25,7 @@
 
 - (NMPaginator *)createPaginator
 {
-    return [[UpcomingMoviesPaginator alloc] initWithPageSize:UPCOMING_PAGE_SIZE delegate:self];
+    return [[RGVUpcomingPaginator alloc] initWithPageSize:UPCOMING_PAGE_SIZE delegate:self];
 }
 
 

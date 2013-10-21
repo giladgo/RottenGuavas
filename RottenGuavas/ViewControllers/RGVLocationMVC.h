@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "RottenGuavaMoviesViewController.h"
+#import "RGVMoviesVC.h"
 
-@interface RottenGuavaLocationMoviesViewController : RottenGuavaMoviesViewController
+@interface RGVLocationMVC : RGVMoviesVC
 
 @property (weak, nonatomic) IBOutlet UINavigationItem *navItem;
 

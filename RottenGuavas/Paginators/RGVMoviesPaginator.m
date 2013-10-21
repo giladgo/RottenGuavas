@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "MoviesPaginator.h"
+#import "RGVMoviesPaginator.h"
 
-@implementation MoviesPaginator
+@implementation RGVMoviesPaginator
 
 - (NSArray *)resultsBlocking:(int*)total withPage:(int)page withPageSize:(int)pageSize
 {

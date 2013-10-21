@@ -6,19 +6,19 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "RottenGuavaTopMoviesViewController.h"
-#import "RottenGuavaMovieController.h"
+#import "RGVInTheatersMVC.h"
+#import "RGVMovieVC.h"
 #import "RottenTomatoesProvider.h"
-#import "TopMoviesPaginator.h"
+#import "RGVInTheatersPaginator.h"
 
 
 #define TOP_MOVIES_PAGE_SIZE 16
 
-@interface RottenGuavaTopMoviesViewController ()
+@interface RGVInTheatersMVC ()
 @property (nonatomic) int total;
 @end
 
-@implementation RottenGuavaTopMoviesViewController
+@implementation RGVInTheatersMVC
 
 - (void)viewDidLoad
 {
@@ -28,7 +28,7 @@
 
 - (NMPaginator *)createPaginator
 {
-    return [[TopMoviesPaginator alloc] initWithPageSize:TOP_MOVIES_PAGE_SIZE delegate:self];
+    return [[RGVInTheatersPaginator alloc] initWithPageSize:TOP_MOVIES_PAGE_SIZE delegate:self];
 }
 
 @end

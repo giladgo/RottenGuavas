@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "RottenGuavaTrailerViewController.h"
+#import "RGVTrailerVC.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <Google-API-Client/GTLYouTube.h>
 
-@interface RottenGuavaTrailerViewController ()
+@interface RGVTrailerVC ()
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
-@implementation RottenGuavaTrailerViewController
+@implementation RGVTrailerVC
 
 
 - (void)viewDidLoad

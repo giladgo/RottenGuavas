@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "MoviesPaginator.h"
+#import "RGVMoviesPaginator.h"
 
-@interface SearchPaginator : MoviesPaginator
+@interface RGVSearchPaginator : RGVMoviesPaginator
 
 @property (strong, nonatomic) NSString *searchText;
 

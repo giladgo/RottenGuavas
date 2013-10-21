@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9417570A1801B7AB001A7626 /* RottenGuavaLocationMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 941757091801B7AB001A7626 /* RottenGuavaLocationMoviesViewController.m */; };
-		9417570D1802A7D8001A7626 /* RottenGuavaTrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9417570C1802A7D8001A7626 /* RottenGuavaTrailerViewController.m */; };
+		9417570A1801B7AB001A7626 /* RGVLocationMVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 941757091801B7AB001A7626 /* RGVLocationMVC.m */; };
+		9417570D1802A7D8001A7626 /* RGVTrailerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9417570C1802A7D8001A7626 /* RGVTrailerVC.m */; };
 		9479EEC817F96686002DAA1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9479EEC717F96686002DAA1B /* Foundation.framework */; };
 		9479EECA17F96686002DAA1B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9479EEC917F96686002DAA1B /* CoreGraphics.framework */; };
 		9479EECC17F96686002DAA1B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9479EECB17F96686002DAA1B /* UIKit.framework */; };
@@ -24,18 +24,18 @@
 		9479EEF317F96686002DAA1B /* RottenGuavasTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9479EEF217F96686002DAA1B /* RottenGuavasTests.m */; };
 		9479EEFE17F96950002DAA1B /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 9479EEFD17F96950002DAA1B /* Movie.m */; };
 		9479EF0317F98FD5002DAA1B /* RottenTomatoesProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9479EF0217F98FD5002DAA1B /* RottenTomatoesProvider.m */; };
-		9487A02617FB064E005F3604 /* RottenGuavaMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487A02117FB064E005F3604 /* RottenGuavaMovieController.m */; };
-		9487A02717FB064E005F3604 /* RottenGuavaSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487A02317FB064E005F3604 /* RottenGuavaSearchViewController.m */; };
-		9487A02817FB064E005F3604 /* RottenGuavaTopMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487A02517FB064E005F3604 /* RottenGuavaTopMoviesViewController.m */; };
-		9487A02B17FB08AF005F3604 /* RottenGuavaMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487A02A17FB08AF005F3604 /* RottenGuavaMoviesViewController.m */; };
+		9487A02617FB064E005F3604 /* RGVMovieVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487A02117FB064E005F3604 /* RGVMovieVC.m */; };
+		9487A02717FB064E005F3604 /* RGVSearchMVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487A02317FB064E005F3604 /* RGVSearchMVC.m */; };
+		9487A02817FB064E005F3604 /* RGVInTheatersMVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487A02517FB064E005F3604 /* RGVInTheatersMVC.m */; };
+		9487A02B17FB08AF005F3604 /* RGVMoviesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487A02A17FB08AF005F3604 /* RGVMoviesVC.m */; };
 		9487A03317FB1AD5005F3604 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9487A03217FB1AD5005F3604 /* search@2x.png */; };
 		9487A03717FB1C30005F3604 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9487A03617FB1C30005F3604 /* star@2x.png */; };
-		9487A03A17FB1E40005F3604 /* RottenGuavaUpcomingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487A03917FB1E40005F3604 /* RottenGuavaUpcomingViewController.m */; };
+		9487A03A17FB1E40005F3604 /* RGVUpcomingMVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487A03917FB1E40005F3604 /* RGVUpcomingMVC.m */; };
 		9487A03C17FB1F13005F3604 /* upcoming@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9487A03B17FB1F13005F3604 /* upcoming@2x.png */; };
-		94D754A617FD893300B46D40 /* UpcomingMoviesPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D754A517FD893300B46D40 /* UpcomingMoviesPaginator.m */; };
-		94D754AD17FD8F2100B46D40 /* SearchPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D754AC17FD8F2100B46D40 /* SearchPaginator.m */; };
-		94D754B017FD9EDD00B46D40 /* MoviesPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D754AF17FD9EDD00B46D40 /* MoviesPaginator.m */; };
-		94D754B317FDA07C00B46D40 /* TopMoviesPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D754B217FDA07C00B46D40 /* TopMoviesPaginator.m */; };
+		94D754A617FD893300B46D40 /* RGVUpcomingPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D754A517FD893300B46D40 /* RGVUpcomingPaginator.m */; };
+		94D754AD17FD8F2100B46D40 /* RGVSearchPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D754AC17FD8F2100B46D40 /* RGVSearchPaginator.m */; };
+		94D754B017FD9EDD00B46D40 /* RGVMoviesPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D754AF17FD9EDD00B46D40 /* RGVMoviesPaginator.m */; };
+		94D754B317FDA07C00B46D40 /* RGVInTheatersPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D754B217FDA07C00B46D40 /* RGVInTheatersPaginator.m */; };
 		94D754B517FDA1D100B46D40 /* poster_default@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 94D754B417FDA1D100B46D40 /* poster_default@2x.gif */; };
 		FB64CEE3D07D4EA39BE52F5C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B31C9ED90B44048AC6A2B69 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -52,10 +52,10 @@
 
 /* Begin PBXFileReference section */
 		1B31C9ED90B44048AC6A2B69 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		941757081801B7AB001A7626 /* RottenGuavaLocationMoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RottenGuavaLocationMoviesViewController.h; path = ViewControllers/RottenGuavaLocationMoviesViewController.h; sourceTree = "<group>"; };
-		941757091801B7AB001A7626 /* RottenGuavaLocationMoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RottenGuavaLocationMoviesViewController.m; path = ViewControllers/RottenGuavaLocationMoviesViewController.m; sourceTree = "<group>"; };
-		9417570B1802A7D8001A7626 /* RottenGuavaTrailerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RottenGuavaTrailerViewController.h; path = ViewControllers/RottenGuavaTrailerViewController.h; sourceTree = "<group>"; };
-		9417570C1802A7D8001A7626 /* RottenGuavaTrailerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RottenGuavaTrailerViewController.m; path = ViewControllers/RottenGuavaTrailerViewController.m; sourceTree = "<group>"; };
+		941757081801B7AB001A7626 /* RGVLocationMVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RGVLocationMVC.h; path = ViewControllers/RGVLocationMVC.h; sourceTree = "<group>"; };
+		941757091801B7AB001A7626 /* RGVLocationMVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RGVLocationMVC.m; path = ViewControllers/RGVLocationMVC.m; sourceTree = "<group>"; };
+		9417570B1802A7D8001A7626 /* RGVTrailerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RGVTrailerVC.h; path = ViewControllers/RGVTrailerVC.h; sourceTree = "<group>"; };
+		9417570C1802A7D8001A7626 /* RGVTrailerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RGVTrailerVC.m; path = ViewControllers/RGVTrailerVC.m; sourceTree = "<group>"; };
 		9479EEC417F96686002DAA1B /* RottenGuavas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RottenGuavas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9479EEC717F96686002DAA1B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9479EEC917F96686002DAA1B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -77,27 +77,27 @@
 		9479EEFD17F96950002DAA1B /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = Model/Movie.m; sourceTree = "<group>"; };
 		9479EF0117F98FD5002DAA1B /* RottenTomatoesProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RottenTomatoesProvider.h; path = Model/RottenTomatoesProvider.h; sourceTree = "<group>"; };
 		9479EF0217F98FD5002DAA1B /* RottenTomatoesProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RottenTomatoesProvider.m; path = Model/RottenTomatoesProvider.m; sourceTree = "<group>"; };
-		9487A02017FB064E005F3604 /* RottenGuavaMovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RottenGuavaMovieController.h; path = ViewControllers/RottenGuavaMovieController.h; sourceTree = "<group>"; };
-		9487A02117FB064E005F3604 /* RottenGuavaMovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RottenGuavaMovieController.m; path = ViewControllers/RottenGuavaMovieController.m; sourceTree = "<group>"; };
-		9487A02217FB064E005F3604 /* RottenGuavaSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RottenGuavaSearchViewController.h; path = ViewControllers/RottenGuavaSearchViewController.h; sourceTree = "<group>"; };
-		9487A02317FB064E005F3604 /* RottenGuavaSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RottenGuavaSearchViewController.m; path = ViewControllers/RottenGuavaSearchViewController.m; sourceTree = "<group>"; };
-		9487A02417FB064E005F3604 /* RottenGuavaTopMoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RottenGuavaTopMoviesViewController.h; path = ViewControllers/RottenGuavaTopMoviesViewController.h; sourceTree = "<group>"; };
-		9487A02517FB064E005F3604 /* RottenGuavaTopMoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RottenGuavaTopMoviesViewController.m; path = ViewControllers/RottenGuavaTopMoviesViewController.m; sourceTree = "<group>"; };
-		9487A02917FB08AF005F3604 /* RottenGuavaMoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RottenGuavaMoviesViewController.h; path = ViewControllers/RottenGuavaMoviesViewController.h; sourceTree = "<group>"; };
-		9487A02A17FB08AF005F3604 /* RottenGuavaMoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RottenGuavaMoviesViewController.m; path = ViewControllers/RottenGuavaMoviesViewController.m; sourceTree = "<group>"; };
+		9487A02017FB064E005F3604 /* RGVMovieVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RGVMovieVC.h; path = ViewControllers/RGVMovieVC.h; sourceTree = "<group>"; };
+		9487A02117FB064E005F3604 /* RGVMovieVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RGVMovieVC.m; path = ViewControllers/RGVMovieVC.m; sourceTree = "<group>"; };
+		9487A02217FB064E005F3604 /* RGVSearchMVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RGVSearchMVC.h; path = ViewControllers/RGVSearchMVC.h; sourceTree = "<group>"; };
+		9487A02317FB064E005F3604 /* RGVSearchMVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RGVSearchMVC.m; path = ViewControllers/RGVSearchMVC.m; sourceTree = "<group>"; };
+		9487A02417FB064E005F3604 /* RGVInTheatersMVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RGVInTheatersMVC.h; path = ViewControllers/RGVInTheatersMVC.h; sourceTree = "<group>"; };
+		9487A02517FB064E005F3604 /* RGVInTheatersMVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RGVInTheatersMVC.m; path = ViewControllers/RGVInTheatersMVC.m; sourceTree = "<group>"; };
+		9487A02917FB08AF005F3604 /* RGVMoviesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RGVMoviesVC.h; path = ViewControllers/RGVMoviesVC.h; sourceTree = "<group>"; };
+		9487A02A17FB08AF005F3604 /* RGVMoviesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RGVMoviesVC.m; path = ViewControllers/RGVMoviesVC.m; sourceTree = "<group>"; };
 		9487A03217FB1AD5005F3604 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
 		9487A03617FB1C30005F3604 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
-		9487A03817FB1E40005F3604 /* RottenGuavaUpcomingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RottenGuavaUpcomingViewController.h; sourceTree = "<group>"; };
-		9487A03917FB1E40005F3604 /* RottenGuavaUpcomingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RottenGuavaUpcomingViewController.m; sourceTree = "<group>"; };
+		9487A03817FB1E40005F3604 /* RGVUpcomingMVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGVUpcomingMVC.h; sourceTree = "<group>"; };
+		9487A03917FB1E40005F3604 /* RGVUpcomingMVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGVUpcomingMVC.m; sourceTree = "<group>"; };
 		9487A03B17FB1F13005F3604 /* upcoming@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upcoming@2x.png"; sourceTree = "<group>"; };
-		94D754A417FD893300B46D40 /* UpcomingMoviesPaginator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpcomingMoviesPaginator.h; path = Paginators/UpcomingMoviesPaginator.h; sourceTree = "<group>"; };
-		94D754A517FD893300B46D40 /* UpcomingMoviesPaginator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpcomingMoviesPaginator.m; path = Paginators/UpcomingMoviesPaginator.m; sourceTree = "<group>"; };
-		94D754AB17FD8F2100B46D40 /* SearchPaginator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchPaginator.h; path = Paginators/SearchPaginator.h; sourceTree = "<group>"; };
-		94D754AC17FD8F2100B46D40 /* SearchPaginator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchPaginator.m; path = Paginators/SearchPaginator.m; sourceTree = "<group>"; };
-		94D754AE17FD9EDD00B46D40 /* MoviesPaginator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoviesPaginator.h; path = Paginators/MoviesPaginator.h; sourceTree = "<group>"; };
-		94D754AF17FD9EDD00B46D40 /* MoviesPaginator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoviesPaginator.m; path = Paginators/MoviesPaginator.m; sourceTree = "<group>"; };
-		94D754B117FDA07C00B46D40 /* TopMoviesPaginator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopMoviesPaginator.h; path = Paginators/TopMoviesPaginator.h; sourceTree = "<group>"; };
-		94D754B217FDA07C00B46D40 /* TopMoviesPaginator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopMoviesPaginator.m; path = Paginators/TopMoviesPaginator.m; sourceTree = "<group>"; };
+		94D754A417FD893300B46D40 /* RGVUpcomingPaginator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RGVUpcomingPaginator.h; path = Paginators/RGVUpcomingPaginator.h; sourceTree = "<group>"; };
+		94D754A517FD893300B46D40 /* RGVUpcomingPaginator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RGVUpcomingPaginator.m; path = Paginators/RGVUpcomingPaginator.m; sourceTree = "<group>"; };
+		94D754AB17FD8F2100B46D40 /* RGVSearchPaginator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RGVSearchPaginator.h; path = Paginators/RGVSearchPaginator.h; sourceTree = "<group>"; };
+		94D754AC17FD8F2100B46D40 /* RGVSearchPaginator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RGVSearchPaginator.m; path = Paginators/RGVSearchPaginator.m; sourceTree = "<group>"; };
+		94D754AE17FD9EDD00B46D40 /* RGVMoviesPaginator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RGVMoviesPaginator.h; path = Paginators/RGVMoviesPaginator.h; sourceTree = "<group>"; };
+		94D754AF17FD9EDD00B46D40 /* RGVMoviesPaginator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RGVMoviesPaginator.m; path = Paginators/RGVMoviesPaginator.m; sourceTree = "<group>"; };
+		94D754B117FDA07C00B46D40 /* RGVInTheatersPaginator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RGVInTheatersPaginator.h; path = Paginators/RGVInTheatersPaginator.h; sourceTree = "<group>"; };
+		94D754B217FDA07C00B46D40 /* RGVInTheatersPaginator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RGVInTheatersPaginator.m; path = Paginators/RGVInTheatersPaginator.m; sourceTree = "<group>"; };
 		94D754B417FDA1D100B46D40 /* poster_default@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "poster_default@2x.gif"; sourceTree = "<group>"; };
 		C5341A2C1D9944E098A36197 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,12 +162,12 @@
 		9479EECD17F96686002DAA1B /* RottenGuavas */ = {
 			isa = PBXGroup;
 			children = (
-				94D754A317FD88FC00B46D40 /* Paginators */,
 				9487A03B17FB1F13005F3604 /* upcoming@2x.png */,
 				9487A03617FB1C30005F3604 /* star@2x.png */,
 				9487A03217FB1AD5005F3604 /* search@2x.png */,
 				94D754B417FDA1D100B46D40 /* poster_default@2x.gif */,
 				9479EED917F96686002DAA1B /* Main.storyboard */,
+				94D754A317FD88FC00B46D40 /* Paginators */,
 				9487A01F17FB0610005F3604 /* ViewControllers */,
 				9479EEDF17F96686002DAA1B /* Images.xcassets */,
 				9479EECE17F96686002DAA1B /* Supporting Files */,
@@ -221,12 +221,12 @@
 		9487A01F17FB0610005F3604 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9487A02017FB064E005F3604 /* RottenGuavaMovieController.h */,
-				9487A02117FB064E005F3604 /* RottenGuavaMovieController.m */,
-				9487A02917FB08AF005F3604 /* RottenGuavaMoviesViewController.h */,
-				9487A02A17FB08AF005F3604 /* RottenGuavaMoviesViewController.m */,
-				9417570B1802A7D8001A7626 /* RottenGuavaTrailerViewController.h */,
-				9417570C1802A7D8001A7626 /* RottenGuavaTrailerViewController.m */,
+				9487A02017FB064E005F3604 /* RGVMovieVC.h */,
+				9487A02117FB064E005F3604 /* RGVMovieVC.m */,
+				9487A02917FB08AF005F3604 /* RGVMoviesVC.h */,
+				9487A02A17FB08AF005F3604 /* RGVMoviesVC.m */,
+				9417570B1802A7D8001A7626 /* RGVTrailerVC.h */,
+				9417570C1802A7D8001A7626 /* RGVTrailerVC.m */,
 				94D754A717FD8A8100B46D40 /* Specific */,
 			);
 			name = ViewControllers;
@@ -235,14 +235,14 @@
 		94D754A317FD88FC00B46D40 /* Paginators */ = {
 			isa = PBXGroup;
 			children = (
-				94D754B117FDA07C00B46D40 /* TopMoviesPaginator.h */,
-				94D754B217FDA07C00B46D40 /* TopMoviesPaginator.m */,
-				94D754A417FD893300B46D40 /* UpcomingMoviesPaginator.h */,
-				94D754A517FD893300B46D40 /* UpcomingMoviesPaginator.m */,
-				94D754AB17FD8F2100B46D40 /* SearchPaginator.h */,
-				94D754AC17FD8F2100B46D40 /* SearchPaginator.m */,
-				94D754AE17FD9EDD00B46D40 /* MoviesPaginator.h */,
-				94D754AF17FD9EDD00B46D40 /* MoviesPaginator.m */,
+				94D754B117FDA07C00B46D40 /* RGVInTheatersPaginator.h */,
+				94D754B217FDA07C00B46D40 /* RGVInTheatersPaginator.m */,
+				94D754A417FD893300B46D40 /* RGVUpcomingPaginator.h */,
+				94D754A517FD893300B46D40 /* RGVUpcomingPaginator.m */,
+				94D754AB17FD8F2100B46D40 /* RGVSearchPaginator.h */,
+				94D754AC17FD8F2100B46D40 /* RGVSearchPaginator.m */,
+				94D754AE17FD9EDD00B46D40 /* RGVMoviesPaginator.h */,
+				94D754AF17FD9EDD00B46D40 /* RGVMoviesPaginator.m */,
 			);
 			name = Paginators;
 			sourceTree = "<group>";
@@ -250,14 +250,14 @@
 		94D754A717FD8A8100B46D40 /* Specific */ = {
 			isa = PBXGroup;
 			children = (
-				9487A02217FB064E005F3604 /* RottenGuavaSearchViewController.h */,
-				9487A02317FB064E005F3604 /* RottenGuavaSearchViewController.m */,
-				9487A02417FB064E005F3604 /* RottenGuavaTopMoviesViewController.h */,
-				9487A02517FB064E005F3604 /* RottenGuavaTopMoviesViewController.m */,
-				9487A03817FB1E40005F3604 /* RottenGuavaUpcomingViewController.h */,
-				9487A03917FB1E40005F3604 /* RottenGuavaUpcomingViewController.m */,
-				941757081801B7AB001A7626 /* RottenGuavaLocationMoviesViewController.h */,
-				941757091801B7AB001A7626 /* RottenGuavaLocationMoviesViewController.m */,
+				9487A02217FB064E005F3604 /* RGVSearchMVC.h */,
+				9487A02317FB064E005F3604 /* RGVSearchMVC.m */,
+				9487A02417FB064E005F3604 /* RGVInTheatersMVC.h */,
+				9487A02517FB064E005F3604 /* RGVInTheatersMVC.m */,
+				9487A03817FB1E40005F3604 /* RGVUpcomingMVC.h */,
+				9487A03917FB1E40005F3604 /* RGVUpcomingMVC.m */,
+				941757081801B7AB001A7626 /* RGVLocationMVC.h */,
+				941757091801B7AB001A7626 /* RGVLocationMVC.m */,
 			);
 			name = Specific;
 			sourceTree = "<group>";
@@ -403,20 +403,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				9479EED417F96686002DAA1B /* main.m in Sources */,
-				94D754B017FD9EDD00B46D40 /* MoviesPaginator.m in Sources */,
+				94D754B017FD9EDD00B46D40 /* RGVMoviesPaginator.m in Sources */,
 				9479EF0317F98FD5002DAA1B /* RottenTomatoesProvider.m in Sources */,
-				9417570D1802A7D8001A7626 /* RottenGuavaTrailerViewController.m in Sources */,
-				94D754A617FD893300B46D40 /* UpcomingMoviesPaginator.m in Sources */,
-				9487A02B17FB08AF005F3604 /* RottenGuavaMoviesViewController.m in Sources */,
+				9417570D1802A7D8001A7626 /* RGVTrailerVC.m in Sources */,
+				94D754A617FD893300B46D40 /* RGVUpcomingPaginator.m in Sources */,
+				9487A02B17FB08AF005F3604 /* RGVMoviesVC.m in Sources */,
 				9479EEFE17F96950002DAA1B /* Movie.m in Sources */,
-				9487A02817FB064E005F3604 /* RottenGuavaTopMoviesViewController.m in Sources */,
-				9487A03A17FB1E40005F3604 /* RottenGuavaUpcomingViewController.m in Sources */,
-				9487A02717FB064E005F3604 /* RottenGuavaSearchViewController.m in Sources */,
-				9417570A1801B7AB001A7626 /* RottenGuavaLocationMoviesViewController.m in Sources */,
+				9487A02817FB064E005F3604 /* RGVInTheatersMVC.m in Sources */,
+				9487A03A17FB1E40005F3604 /* RGVUpcomingMVC.m in Sources */,
+				9487A02717FB064E005F3604 /* RGVSearchMVC.m in Sources */,
+				9417570A1801B7AB001A7626 /* RGVLocationMVC.m in Sources */,
 				9479EED817F96686002DAA1B /* RottenGuavaAppDelegate.m in Sources */,
-				9487A02617FB064E005F3604 /* RottenGuavaMovieController.m in Sources */,
-				94D754AD17FD8F2100B46D40 /* SearchPaginator.m in Sources */,
-				94D754B317FDA07C00B46D40 /* TopMoviesPaginator.m in Sources */,
+				9487A02617FB064E005F3604 /* RGVMovieVC.m in Sources */,
+				94D754AD17FD8F2100B46D40 /* RGVSearchPaginator.m in Sources */,
+				94D754B317FDA07C00B46D40 /* RGVInTheatersPaginator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "RottenGuavaMoviesViewController.h"
+#import "RGVMoviesVC.h"
 #import "Movie.h"
 
-@interface RottenGuavaTrailerViewController : UIViewController
+@interface RGVTrailerVC : UIViewController
 
 @property (nonatomic, strong) Movie* movie;
 

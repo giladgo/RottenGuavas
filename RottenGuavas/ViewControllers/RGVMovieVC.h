@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Movie.h"
 
-@interface RottenGuavaMovieController : UIViewController
+@interface RGVMovieVC : UIViewController
 
 @property (nonatomic, strong) Movie *movie;
 

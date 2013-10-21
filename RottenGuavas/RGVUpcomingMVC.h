@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "RottenGuavaLocationMoviesViewController.h"
+#import "RGVLocationMVC.h"
 
-@interface RottenGuavaUpcomingViewController : RottenGuavaLocationMoviesViewController
+@interface RGVUpcomingMVC : RGVLocationMVC
 
 @end

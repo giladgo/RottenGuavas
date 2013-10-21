@@ -1,15 +1,14 @@
 //
-//  UpcomingMoviesPaginator.h
+//  TopMoviesPaginator.h
 //  RottenGuavas
 //
 //  Created by Gilad Goldberg on 10/3/13.
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "MoviesPaginator.h"
+#import "RGVMoviesPaginator.h"
 
-
-@interface UpcomingMoviesPaginator : MoviesPaginator
+@interface RGVInTheatersPaginator : RGVMoviesPaginator
 
 @property (nonatomic, strong) NSString *countryCode;
 

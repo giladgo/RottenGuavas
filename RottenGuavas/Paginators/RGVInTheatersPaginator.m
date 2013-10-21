@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "TopMoviesPaginator.h"
+#import "RGVInTheatersPaginator.h"
 #import "RottenTomatoesProvider.h"
 #import "dispatch/queue.h"
 
-@implementation TopMoviesPaginator
+@implementation RGVInTheatersPaginator
 
 
 - (NSArray *)resultsBlocking:(int*)total withPage:(int)page withPageSize:(int)pageSize

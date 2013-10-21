@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "RottenGuavaLocationMoviesViewController.h"
+#import "RGVLocationMVC.h"
 #import <CoreLocation/CoreLocation.h>
 
-@interface RottenGuavaLocationMoviesViewController () <CLLocationManagerDelegate>
+@interface RGVLocationMVC () <CLLocationManagerDelegate>
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLGeocoder *geoCoder;
 @end
 
-@implementation RottenGuavaLocationMoviesViewController
+@implementation RGVLocationMVC
 
 - (void) fetchFirstPage
 {

@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "RottenGuavaMovieController.h"
+#import "RGVMovieVC.h"
 #import "RottenTomatoesProvider.h"
 #import "dispatch/queue.h"
-#import "RottenGuavaTrailerViewController.h"
+#import "RGVTrailerVC.h"
 
-@interface RottenGuavaMovieController () <UITableViewDataSource, UITableViewDelegate>
+@interface RGVMovieVC () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *movieTitle;
 @property (weak, nonatomic) IBOutlet UILabel *stars;
@@ -25,7 +25,7 @@
 - (void)updateUI;
 @end
 
-@implementation RottenGuavaMovieController
+@implementation RGVMovieVC
 
 - (void)updateUI
 {
@@ -108,7 +108,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"Trailer"]) {
-        RottenGuavaTrailerViewController *rgtvc = (RottenGuavaTrailerViewController *)segue.destinationViewController;
+        RGVTrailerVC *rgtvc = (RGVTrailerVC *)segue.destinationViewController;
         rgtvc.movie = self.movie;
     }
 }

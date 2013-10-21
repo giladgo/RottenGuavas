@@ -8,6 +8,6 @@
 
 #import "NMPaginator.h"
 
-@interface MoviesPaginator : NMPaginator
+@interface RGVMoviesPaginator : NMPaginator
 - (NSArray *)resultsBlocking:(int*)total withPage:(int)page withPageSize:(int)pageSize;
 @end

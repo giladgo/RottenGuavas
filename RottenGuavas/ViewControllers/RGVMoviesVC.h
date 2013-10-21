@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NMPaginator.h"
 
-@interface RottenGuavaMoviesViewController : UITableViewController <NMPaginatorDelegate>
+@interface RGVMoviesVC : UITableViewController <NMPaginatorDelegate>
 
 @property (strong, nonatomic) NSMutableArray *movies; // of Movie*
 @property (strong, nonatomic) NSMutableArray *images; // of UIImage*

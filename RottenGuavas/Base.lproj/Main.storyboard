@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lxo-DC-0HV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lxo-DC-0HV">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--Rotten Guava Top Movies View Controller - In Theaters-->
+        <!--In TheatersMVC - In Theaters-->
         <scene sceneID="Kex-8X-UhD">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="oJy-fQ-Aab" customClass="RottenGuavaTopMoviesViewController" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="oJy-fQ-Aab" customClass="RGVInTheatersMVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uTJ-4C-CYy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" id="e8J-qv-g2D">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e8J-qv-g2D" id="qfP-oT-q5n">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="774" y="404"/>
         </scene>
-        <!--Rotten Guava Movie Controller-->
+        <!--MovieVC-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="RottenGuavaMovieController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RGVMovieVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tyg-uG-b2k"/>
                         <viewControllerLayoutGuide type="bottom" id="J7v-Cn-ZL2"/>
@@ -198,10 +198,10 @@
             </objects>
             <point key="canvasLocation" x="1330" y="979"/>
         </scene>
-        <!--Rotten Guava Trailer View Controller-->
+        <!--TrailerVC-->
         <scene sceneID="EHj-wT-1BW">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ksd-TN-CYJ" customClass="RottenGuavaTrailerViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ksd-TN-CYJ" customClass="RGVTrailerVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TiY-1C-um1"/>
                         <viewControllerLayoutGuide type="bottom" id="vK8-zh-xBg"/>
@@ -253,16 +253,16 @@
             </objects>
             <point key="canvasLocation" x="382" y="404"/>
         </scene>
-        <!--Rotten Guava Search View Controller - Search-->
+        <!--SearchMVC - Search-->
         <scene sceneID="tdp-hC-BpP">
             <objects>
-                <tableViewController id="Dbh-Ai-6xL" customClass="RottenGuavaSearchViewController" sceneMemberID="viewController">
+                <tableViewController id="Dbh-Ai-6xL" customClass="RGVSearchMVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lxf-ua-1xs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="u19-Oq-KKl">
-                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -271,7 +271,7 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" id="3X0-I8-pe2">
-                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3X0-I8-pe2" id="Wff-lp-Fdr">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -294,17 +294,17 @@
             </objects>
             <point key="canvasLocation" x="774" y="985"/>
         </scene>
-        <!--Rotten Guava Upcoming View Controller - Upcoming-->
+        <!--UpcomingMVC - Upcoming-->
         <scene sceneID="WHn-U8-JpJ">
             <objects>
-                <tableViewController id="JDO-g3-HjD" customClass="RottenGuavaUpcomingViewController" sceneMemberID="viewController">
+                <tableViewController id="JDO-g3-HjD" customClass="RGVUpcomingMVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vhj-ua-DHi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" id="C1R-Ut-T9r">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C1R-Ut-T9r" id="uZL-DA-S0V">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>

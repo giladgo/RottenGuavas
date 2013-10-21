@@ -6,29 +6,28 @@
 //  Copyright (c) 2013 Gilad Goldberg. All rights reserved.
 //
 
-#import "RottenGuavaSearchViewController.h"
-#import "RottenGuavaMovieController.h"
+#import "RGVSearchMVC.h"
+#import "RGVMovieVC.h"
 #import "RottenTomatoesProvider.h"
-#import "SearchPaginator.h"
+#import "RGVSearchPaginator.h"
 
 #define SEARCH_PAGE_SIZE 50
 
-@interface RottenGuavaSearchViewController () <UISearchBarDelegate>
+@interface RGVSearchMVC () <UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
-@implementation RottenGuavaSearchViewController
+@implementation RGVSearchMVC
 
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.searchBar becomeFirstResponder];
 }
 
 - (NMPaginator *)createPaginator
 {
-    SearchPaginator *paginator = [[SearchPaginator alloc] initWithPageSize:SEARCH_PAGE_SIZE delegate:self];
+    RGVSearchPaginator *paginator = [[RGVSearchPaginator alloc] initWithPageSize:SEARCH_PAGE_SIZE delegate:self];
     paginator.searchText = self.searchBar.text;
     return paginator;
 }
